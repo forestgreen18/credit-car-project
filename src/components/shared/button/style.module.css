@@ -3,11 +3,24 @@
   font-size: 18px;
   font-weight: 700;
   color: var(--text-color-white);
-  background: var(--btn-color-red);
   border-radius: 20px;
   margin-top: 6%;
   display: flex;
   justify-self: flex-start;
+}
+
+.btn-red {
+  background: var(--btn-color-red);
+}
+
+.btn-white {
+  background: none;
+  color: var(--text-paragraph);
+  border: 2px solid var(--text-paragraph);
+}
+
+.btn-blue {
+  background: var(--bg-color-blue);
 }
 
 a {

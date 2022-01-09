@@ -12,7 +12,7 @@ const Hero = () => {
       <section className={cx("root-hero")}>
         <Header />
         <div className={css['text-content']}>
-          <div className={css['heading']}>
+          <div  className={cx("heading")}>
             Оформи автокредит <br />
             и получи авто в день <br />
             обращения
@@ -35,7 +35,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <Button />
+          <Button title={"Завка на кредит"} color={"red"}/>
         </div>
       </section>
   );

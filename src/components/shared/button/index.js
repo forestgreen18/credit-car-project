@@ -1,10 +1,12 @@
 import React from 'react'
 import css from './style.module.css'
+import cn from 'classnames/bind'
+const cx = cn.bind(css)
 
-const Button = () => {
+const Button = ({title, color}) => {
 	return (
-		<a className={css['button']} href='#'>
-			Завка на кредит
+		<a className={cx("button", `btn-${color}`)} href='#'>
+			{title}
 		</a>
 	)
 }

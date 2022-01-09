@@ -1,0 +1,20 @@
+.credit-application-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heading.credit-heading {
+  margin-top: 135px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.button {
+  margin-top: 60px;
+}
+
+a {
+  margin-top: 20px;
+}

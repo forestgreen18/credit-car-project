@@ -4,13 +4,6 @@
   z-index: 12;
 }
 
-.heading {
-  margin-top: 14%;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 1.23;
-}
-
 .text-content {
   display: flex;
   flex-direction: column;

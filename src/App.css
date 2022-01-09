@@ -20,7 +20,7 @@ body {
 .section-heading {
   font-weight: 700;
   font-size: 42px;
-  line-height: 1.1;
+  line-height: 1.2;
   color: var(--heading-color);
 }
 
@@ -34,4 +34,17 @@ body {
   color: var(--text-black);
   font-weight: 400;
   font-size: 18px;
+}
+
+.desc-paragraph {
+  color: var(--text-paragraph);
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.heading {
+  margin-top: 14%;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.23;
 }

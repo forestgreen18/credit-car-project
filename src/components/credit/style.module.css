@@ -1,0 +1,23 @@
+/* .section-heading span {
+  color: var(--bg-color-blue);
+} */
+
+.credit-heading {
+  padding-top: 100px;
+}
+
+.credit-heading span {
+  display: inline;
+  color: var(--bg-color-blue);
+}
+
+.credit-options-block {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+}
+
+.credit-section {
+  padding-bottom: 100px;
+}

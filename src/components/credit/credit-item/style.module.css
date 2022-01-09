@@ -1,0 +1,39 @@
+.buttons-block {
+  padding-top: 60px;
+  display: flex;
+}
+
+.buttons-block a {
+  margin: 0;
+}
+
+.buttons-block a:nth-child(2) {
+  margin-left: 20px;
+}
+
+.credit-item {
+  margin-top: 60px;
+  max-height: 428px;
+  height: 100%;
+  border: 2px solid #e1e1e1;
+  border-radius: 30px;
+  padding: 60px;
+}
+
+.credit-item p,
+.credit-item span {
+  margin: 0;
+  padding: 0;
+}
+
+.heading-block {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+p.desc-credit {
+  text-align: justify;
+  margin-top: 25px;
+}
