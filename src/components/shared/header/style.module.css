@@ -1,0 +1,49 @@
+header {
+  margin-top: 2.7%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+}
+
+ul {
+  gap: 25px;
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+span {
+  display: flex;
+  align-items: center;
+}
+
+.phoneLink {
+  text-decoration: none;
+  color: #fff;
+}
+
+.burgerMenu {
+  gap: 9px;
+}
+
+.burgerMenu div:first-child {
+  margin: 0;
+}
+
+.burgerMenu div {
+  width: 30px;
+  height: 2px;
+  background: var(--text-color-white);
+  margin-top: 9px;
+}
+
+.burgerMenu:hover {
+  cursor: pointer;
+}

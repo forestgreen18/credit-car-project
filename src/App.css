@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+/* common styles */
+
+:root {
+  --btn-color-red: #fe264c;
+  --bg-color-blue: #07b1fd;
+  --text-color-white: #fff;
+  --text-paragraph: #696969;
+  --text-gray: #f3f3f3;
+  --text-black: #000;
+  --heading-color: #2c2c2c;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "PT Root UI";
+  color: var(--text-color-white);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* UI Components */
+
+.section-heading {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.1;
+  color: var(--heading-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.amount-box {
+  border-radius: 9px;
+  background: var(--text-gray);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: var(--text-black);
+  font-weight: 400;
+  font-size: 18px;
 }

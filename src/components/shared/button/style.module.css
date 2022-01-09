@@ -1,0 +1,15 @@
+.button {
+  padding: 15px 45px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color-white);
+  background: var(--btn-color-red);
+  border-radius: 20px;
+  margin-top: 6%;
+  display: flex;
+  justify-self: flex-start;
+}
+
+a {
+  text-decoration: none;
+}

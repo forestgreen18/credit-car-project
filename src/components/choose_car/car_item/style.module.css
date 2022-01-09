@@ -1,0 +1,14 @@
+.car-amount {
+  padding: 6px 16px;
+  margin-left: 10px;
+}
+
+.car-name {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-black);
+}
+
+.info-block {
+  display: flex;
+}

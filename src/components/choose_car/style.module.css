@@ -1,0 +1,23 @@
+.showLink {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-paragraph);
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.showLink img {
+  margin-left: 15px;
+}
+
+.head-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cars-block {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-row-gap: 40px;
+}

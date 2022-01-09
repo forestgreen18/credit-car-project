@@ -1,0 +1,36 @@
+.root-hero {
+  border: 1px solid red;
+  min-height: 980px;
+  z-index: 12;
+}
+
+.heading {
+  margin-top: 14%;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.23;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.text-subcontent {
+  display: flex;
+  gap: 80px;
+  margin-top: 6%;
+}
+
+.text-subcontent div span:first-child {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.text-subcontent div span:nth-child(2) {
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: 400;
+}
