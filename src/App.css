@@ -48,3 +48,17 @@ body {
   font-size: 64px;
   line-height: 1.23;
 }
+
+.buttons-block {
+  display: flex;
+}
+
+.buttons-block div:nth-child(2) {
+  margin-left: 20px;
+}
+
+.heading-span {
+  font-size: inherit;
+  color: var(--bg-color-blue);
+  font-size: 42px;
+}

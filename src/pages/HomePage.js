@@ -12,6 +12,9 @@ import CreditApplication from '../components/credit_application';
 
 import css from './style.module.css'
 import cn from 'classnames/bind'
+import TradeIn from '../components/trade_in';
+import ConsultingBackground from '../components/consulting/consulting_background';
+import Consulting from '../components/consulting';
 const cx = cn.bind(css)
 
 
@@ -43,6 +46,14 @@ const HomePage = () => {
           <CreditApplication />
         </div>
       </CreditBackground>
+      <Container>
+        <TradeIn />
+      </Container>
+      <ConsultingBackground>
+        <Container>
+          <Consulting />
+        </Container>
+      </ConsultingBackground>
     </div>
   );
 };

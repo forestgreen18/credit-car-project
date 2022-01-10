@@ -1,0 +1,24 @@
+.subheading {
+  padding-bottom: 10px;
+  font-size: 24px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.credit-heading {
+  font-size: 42px;
+  line-height: 1.23;
+  margin-top: 80px;
+  font-weight: 700;
+}
+
+.consulting-text img {
+  margin-top: 173px;
+}
+
+.consulting-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 130px;
+}

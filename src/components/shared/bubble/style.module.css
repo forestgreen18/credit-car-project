@@ -1,0 +1,25 @@
+.blue-bubble {
+  width: 262px;
+  height: 262px;
+
+  background: rgba(2, 176, 251, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+
+  font-size: 24px;
+  line-height: 1.16;
+  font-weight: 700;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-line;
+}
+
+.blue-bubble span {
+  font-weight: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}
