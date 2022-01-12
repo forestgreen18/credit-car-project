@@ -1,0 +1,7 @@
+.disclaming-background {
+  width: 100%;
+  height: 93px;
+  background: var(--disclamer-color);
+  display: flex;
+  align-items: center;
+}

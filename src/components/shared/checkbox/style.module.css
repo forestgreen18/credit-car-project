@@ -1,0 +1,49 @@
+.checkbox {
+  height: 16px;
+  width: 16px;
+  border-radius: 2px;
+  border: 1px solid var(--text-color-white);
+  background: none;
+
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid var(--text-color-white);
+  border-radius: 2px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.checkbox:checked + label::before {
+  background-image: url("./assets/arrow.svg");
+  background-size: 10px 8px;
+}
+
+.checkbox-span {
+  position: relative;
+}
+.checkbox-span::after {
+  content: "";
+  position: absolute;
+  top: 102%;
+  left: 0%;
+  width: 100%;
+  height: 1px;
+  background: var(--text-color-white);
+}

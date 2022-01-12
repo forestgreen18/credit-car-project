@@ -1,0 +1,29 @@
+.list-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 12px;
+}
+
+.listItm-block {
+  padding-bottom: 60px;
+}
+
+ul.list-block {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.list-block li {
+  display: block;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--footer-item-color);
+}
+
+.listItem-heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.6;
+  margin-bottom: 29px;
+  margin-top: 60px;
+}

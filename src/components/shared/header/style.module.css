@@ -29,6 +29,15 @@ span {
   color: #fff;
 }
 
+.header-menu-list li > a {
+  color: var(--text-color-white);
+  text-decoration: none;
+}
+
+.phoneLink img {
+  margin-right: 11px;
+}
+
 .burgerMenu {
   gap: 9px;
 }
@@ -46,4 +55,8 @@ span {
 
 .burgerMenu:hover {
   cursor: pointer;
+}
+
+.dropdown-block {
+  position: relative;
 }

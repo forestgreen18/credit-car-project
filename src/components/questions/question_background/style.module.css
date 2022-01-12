@@ -1,0 +1,10 @@
+.question-background {
+  background: var(--bg-color-blue);
+  position: relative;
+  padding-bottom: 190px;
+}
+
+.question-img {
+  top: 0;
+  position: absolute;
+}

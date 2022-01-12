@@ -2,18 +2,21 @@ import React from "react";
 import CreditItem from "./credit-item";
 import css from "./style.module.css";
 import cn from "classnames/bind";
+import percent_icon from './assets/percent_icon.png'
+import creditcard_icon from './assets/creditcard-icon.png'
+
 const cx = cn.bind(css);
 
 const config = [
   {
     title: "Автокредит без первого взноса",
     desc: "Помогаем заполнить заявки на кредит правильно для получения положительных решений от банков.",
-    imgUrl: "../assets/percent_icon.png",
+    imgUrl: percent_icon,
   },
   {
     title: "Автокредит с первым взносом",
     desc: "Заявка с первоначальным взносом для одобрения и получения кредита на выгодных для Вас условиях.",
-    imgUrl: "../assets/creditcard-icon.png",
+    imgUrl: creditcard_icon,
   },
 ];
 

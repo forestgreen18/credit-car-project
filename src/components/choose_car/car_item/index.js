@@ -1,18 +1,34 @@
-import React from 'react'
+import React from "react";
 import css from "./style.module.css";
 import cn from "classnames/bind";
 const cx = cn.bind(css);
 
+const CarItem = ({ name, amount }) => {
+  const [nameClass, setNameClass] = React.useState("");
+  const [amountClass, setAmountClass] = React.useState("");
 
-const CarItem = ({name, amount}) => {
-	return (
-		<div className={cx("info-block")}>
-			<span className={cx("car-name")}>{name}</span>
-			<div className={cx('amount-box', 'car-amount')}>
-				{amount}
-			</div>
-		</div>
-	)
-}
+  function setHoverClasses() {
+    setNameClass("car-name-hover");
+    setAmountClass("car-amount-hover");
+  }
 
-export default CarItem
+  function deleteHoverClasses() {
+    setNameClass("");
+    setAmountClass("");
+  }
+
+  return (
+    <div
+      className={cx("info-block")}
+      onMouseEnter={setHoverClasses}
+      onMouseLeave={deleteHoverClasses}
+    >
+      <span className={cx("car-name", nameClass)}>{name}</span>
+      <div className={cx("amount-box", "car-amount", amountClass)}>
+        {amount}
+      </div>
+    </div>
+  );
+};
+
+export default CarItem;

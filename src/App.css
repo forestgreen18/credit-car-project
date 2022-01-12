@@ -2,12 +2,17 @@
 
 :root {
   --btn-color-red: #fe264c;
+  --btn-color-hover-red: #e83f5c;
   --bg-color-blue: #07b1fd;
+  --btn-color-hover-blue: #029de0;
   --text-color-white: #fff;
   --text-paragraph: #696969;
   --text-gray: #f3f3f3;
   --text-black: #000;
   --heading-color: #2c2c2c;
+  --disclamer-color: #334356;
+  --footer-color: #202c3a;
+  --footer-item-color: #bdbdbd;
 }
 
 body {
@@ -61,4 +66,8 @@ body {
   font-size: inherit;
   color: var(--bg-color-blue);
   font-size: 42px;
+}
+
+.white-heading {
+  color: var(--text-color-white);
 }

@@ -5,18 +5,25 @@ import Background from "../components/hero/background";
 import Steps from "../components/steps";
 import ChooseCar from "../components/choose_car";
 import CreditCondition from "../components/choose_car_by_credit";
-import Credit from '../components/credit';
-import Banks from '../components/banks';
-import CreditBackground from '../components/credit_application/credit_background';
-import CreditApplication from '../components/credit_application';
+import Credit from "../components/credit";
+import Banks from "../components/banks";
+import CreditBackground from "../components/credit_application/credit_background";
+import CreditApplication from "../components/credit_application";
 
-import css from './style.module.css'
-import cn from 'classnames/bind'
-import TradeIn from '../components/trade_in';
-import ConsultingBackground from '../components/consulting/consulting_background';
-import Consulting from '../components/consulting';
-const cx = cn.bind(css)
-
+import css from "./style.module.css";
+import cn from "classnames/bind";
+import TradeIn from "../components/trade_in";
+import ConsultingBackground from "../components/consulting/consulting_background";
+import Consulting from "../components/consulting";
+import Questions from "../components/questions";
+import QuestionBackground from "../components/questions/question_background";
+import Disclaming from "../components/disclamer";
+import DisclamerBackground from "../components/disclamer/disclamer_background";
+import FooterBackground from "../components/footer/footer_background";
+import Footer from "../components/footer";
+import Divider from "../components/shared/divider";
+import Copyright from "../components/footer/copyright";
+const cx = cn.bind(css);
 
 const HomePage = () => {
   return (
@@ -54,6 +61,25 @@ const HomePage = () => {
           <Consulting />
         </Container>
       </ConsultingBackground>
+      <QuestionBackground>
+        <Container>
+          <Questions />
+        </Container>
+      </QuestionBackground>
+      <DisclamerBackground>
+        <Container>
+          <Disclaming />
+        </Container>
+      </DisclamerBackground>
+      <FooterBackground>
+        <Container>
+          <Footer />
+        </Container>
+        <Divider />
+        <Container>
+          <Copyright />
+        </Container>
+      </FooterBackground>
     </div>
   );
 };

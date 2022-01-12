@@ -13,14 +13,27 @@
   background: var(--btn-color-red);
 }
 
+.btn-red:hover {
+  background: var(--btn-color-hover-red);
+}
+
 .btn-white {
   background: none;
   color: var(--text-paragraph);
   border: 2px solid var(--text-paragraph);
 }
 
+.btn-white:hover {
+  border-color: var(--bg-color-blue);
+  color: var(--bg-color-blue);
+}
+
 .btn-blue {
   background: var(--bg-color-blue);
+}
+
+.btn-blue:hover {
+  background: var(--btn-color-hover-blue);
 }
 
 a {

@@ -12,3 +12,16 @@
 .info-block {
   display: flex;
 }
+
+.info-block:hover {
+  cursor: pointer;
+}
+
+.car-amount-hover {
+  color: var(--text-color-white) !important;
+  background: #02b0fb !important;
+}
+
+.car-name-hover {
+  color: #02b0fb;
+}

@@ -3,6 +3,7 @@
   position: relative;
   z-index: -3;
   overflow: hidden;
+  padding-bottom: 90px;
 }
 
 .bubble {

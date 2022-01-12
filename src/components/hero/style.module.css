@@ -17,6 +17,10 @@
   margin-top: 6%;
 }
 
+.text-subcontent div span {
+  display: block;
+}
+
 .text-subcontent div span:first-child {
   font-weight: 700;
   font-size: 30px;
