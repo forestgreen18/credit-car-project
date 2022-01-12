@@ -10,7 +10,11 @@ const ListItem = ({ title, items }) => {
       <h4 className={cx("listItem-heading")}>{title}</h4>
       <ul className={cx("list-block")}>
         {items[0].map((listItm) => {
-          return <li>{listItm}</li>;
+          return (
+            <li>
+              <a href="#">{listItm}</a>
+            </li>
+          );
         })}
       </ul>
     </div>

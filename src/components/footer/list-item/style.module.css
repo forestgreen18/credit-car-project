@@ -4,6 +4,11 @@
   grid-row-gap: 12px;
 }
 
+.list-block a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .listItm-block {
   padding-bottom: 60px;
 }
