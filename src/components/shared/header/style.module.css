@@ -53,10 +53,27 @@ span {
   margin-top: 9px;
 }
 
+.header-light.burgerMenu div {
+  background: var(--bg-color-blue);
+}
+
 .burgerMenu:hover {
   cursor: pointer;
 }
 
 .dropdown-block {
   position: relative;
+}
+
+.header-light {
+  color: var(--text-black);
+}
+
+.header-light.header-menu-list li > a {
+  color: var(--text-black);
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 40px;
 }

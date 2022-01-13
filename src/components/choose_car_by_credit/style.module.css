@@ -68,3 +68,8 @@
 
 .slider-box div:last-child {
 }
+
+.rc-slider-mark span:last-child {
+  background: red !important;
+  white-space: nowrap !important;
+}
