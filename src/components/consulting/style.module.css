@@ -22,3 +22,8 @@
   align-items: flex-start;
   padding-bottom: 130px;
 }
+
+.consulting-heading {
+  margin-top: 80px;
+  color: var(--text-color-white);
+}

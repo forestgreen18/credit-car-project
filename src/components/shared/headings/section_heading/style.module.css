@@ -4,3 +4,7 @@
   line-height: 1.2;
   color: var(--heading-color);
 }
+
+.section-span {
+  color: wheat;
+}

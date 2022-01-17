@@ -1,0 +1,12 @@
+.car-select-heading {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #464646;
+  font-weight: 400;
+}
+
+.select-car {
+  display: grid;
+  grid-template-columns: repeat(2, 380px);
+  grid-column-gap: 23px;
+}

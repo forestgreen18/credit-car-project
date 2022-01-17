@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+.choosecar-heading {
+  margin: 42px 0;
+}
+
+.choosecar-section {
+  padding-bottom: 66px;
+}
+
 .showLink img {
   margin-left: 15px;
 }

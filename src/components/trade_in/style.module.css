@@ -25,6 +25,10 @@ span {
   margin-bottom: 40px;
 }
 
+.tradein-heading {
+  margin-top: 0;
+}
+
 .buttons-block {
   display: flex;
 }

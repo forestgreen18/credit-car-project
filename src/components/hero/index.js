@@ -4,6 +4,7 @@ import Header from "../shared/header";
 import css from "./style.module.css";
 import cn from "classnames/bind";
 import Button from "../shared/button";
+import MainHeading from "../shared/headings/main_heading";
 
 const cx = cn.bind(css);
 
@@ -12,11 +13,17 @@ const Hero = () => {
     <section className={cx("root-hero")}>
       <Header type="blue" />
       <div className={css["text-content"]}>
-        <div className={cx("heading")}>
+        {/* <div className={cx("heading")}>
           Оформи автокредит <br />
           и получи авто в день <br />
           обращения
-        </div>
+        </div> */}
+
+        <MainHeading customClass={cx("hero-heading")}>
+          Оформи автокредит <br />
+          и получи авто в день <br />
+          обращения
+        </MainHeading>
 
         <div className={css["text-subcontent"]}>
           <div>

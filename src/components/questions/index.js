@@ -2,7 +2,7 @@ import React from "react";
 
 import css from "./style.module.css";
 import cn from "classnames/bind";
-import Heading from "../shared/section_heading";
+import SectionHeading from "../shared/headings/section_heading";
 import Button from "../shared/button";
 import Input from "../shared/input";
 import Checkbox from "../shared/checkbox";
@@ -11,9 +11,10 @@ const cx = cn.bind(css);
 const Questions = () => {
   return (
     <section className={cx("question-section")}>
-      <Heading customStyles={cx("white-heading", "question-heading")}>
+      <SectionHeading customClass={cx("white-heading", "question-heading")}>
         Остались вопросы? <br /> Напишите нам
-      </Heading>
+      </SectionHeading>
+
       <p className={cx("question-subheading")}>
         Оставьте заявку и наши менеджеры свяжуться с Вами, чтобы обсудить все
         вопросы

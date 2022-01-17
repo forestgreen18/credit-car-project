@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./style.module.css";
 import cn from "classnames/bind";
-import DropdownMenu from "../../dropdown menu";
+import DropdownMenu from "../../dropdown menu/dropdown_header";
 import { cities } from "./mock";
 import logo from "./assets/logo.png";
 import blueLogo from "./assets/blue_logo.svg";

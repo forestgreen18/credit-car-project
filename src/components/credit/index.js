@@ -2,8 +2,9 @@ import React from "react";
 import CreditItem from "./credit-item";
 import css from "./style.module.css";
 import cn from "classnames/bind";
-import percent_icon from './assets/percent_icon.png'
-import creditcard_icon from './assets/creditcard-icon.png'
+import percent_icon from "./assets/percent_icon.png";
+import creditcard_icon from "./assets/creditcard-icon.png";
+import SectionHeading from "../shared/headings/section_heading";
 
 const cx = cn.bind(css);
 
@@ -24,24 +25,34 @@ const Credit = () => {
   return (
     <section className={cx("credit-section")}>
       <div className={cx("heading-box")}>
-        <p className={cx("section-heading", "credit-heading")}>
+        {/* <p className={cx("section-heading", "credit-heading")}>
           Кредит под любые условия <br />
           со ставкой <span>от 7,4%</span>
-        </p>
+        </p> */}
+
+        <SectionHeading
+          className={cx("section-heading", "credit-heading")}
+          span={" от 7,4%"}
+        >
+          Кредит под любые условия <br />
+          со ставкой
+        </SectionHeading>
         <p className={cx("desc-paragraph")}>
           Наш опытный специалист по подбору авто и <br />
           автокредитов обезопасит от любых «сюрпризов»
         </p>
       </div>
-	  <div className={cx("credit-options-block")}>
-		  {config.map((item) => {
-				return (
-					<CreditItem title={item.title} desc={item.desc} imgUrl={item.imgUrl} />
-				)
-			}
-			)}
-		
-	  </div>
+      <div className={cx("credit-options-block")}>
+        {config.map((item) => {
+          return (
+            <CreditItem
+              title={item.title}
+              desc={item.desc}
+              imgUrl={item.imgUrl}
+            />
+          );
+        })}
+      </div>
     </section>
   );
 };

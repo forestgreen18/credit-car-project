@@ -15,6 +15,10 @@
   margin-top: 60px;
 }
 
+.credit-heading {
+  color: var(--text-color-white);
+}
+
 a {
   margin-top: 20px;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "../shared/section_heading";
+import SectionHeading from "../shared/headings/section_heading";
 import CreditSlider from "./CreditSlider";
 
 import css from "./style.module.css";
@@ -10,9 +10,10 @@ const cx = cn.bind(css);
 function CreditCondition() {
   return (
     <section>
-      <Heading customStyles={cx("subheading-credit-car")}>
+      <SectionHeading customStyles={cx("subheading-credit-car")}>
         Подбор автомобиля под <br /> условия кредита
-      </Heading>
+      </SectionHeading>
+
       {/* <p className={cx("section-heading", "subheading-credit-car")}></p> */}
       <p className={cx("desc-paragraph", "sub-heading")}>
         Выберите автомобиль под свои возможности из <br />

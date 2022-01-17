@@ -1,0 +1,72 @@
+.car-card {
+  max-height: 560px;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+}
+
+.car-year {
+  font-size: 16px;
+  margin-top: 25px;
+  padding-bottom: 5px;
+  /* line-height: 1.6; */
+  color: var(--price-color);
+}
+
+.car-name {
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--bg-color-blue);
+  font-weight: 700;
+}
+
+.standard-price {
+  margin-top: 25px;
+  font-size: 18px;
+
+  /* line-height: 1.6; */
+  color: var(--price-color);
+}
+
+.standard-price,
+.credit-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.standard-price span:nth-child(2) {
+  font-size: 14px;
+  /* line-height: 1.6; */
+  color: #464646;
+}
+
+.credit-price {
+  margin-top: 8px;
+  font-size: 24px;
+  color: var(--bg-color-blue);
+  font-weight: 700;
+  align-items: center;
+}
+
+.credit-price span:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.credit-price span:first-child img {
+  margin-left: 12px;
+}
+
+.credit-price span:nth-child(2) {
+  font-size: 14px;
+}
+
+.checkbox-block {
+  margin-top: 25px;
+  padding-bottom: 27px;
+}

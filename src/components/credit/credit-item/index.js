@@ -1,6 +1,7 @@
 import React from "react";
 
 import Button from "../../shared/button";
+import SectionHeading from "../../shared/headings/section_heading";
 
 import css from "./style.module.css";
 import cn from "classnames/bind";
@@ -10,7 +11,10 @@ function CreditItem({ title, desc, imgUrl }) {
   return (
     <div className={cx("credit-item")}>
       <div className={cx("heading-block")}>
-        <p className={cx("section-heading")}>{title}</p>
+        <SectionHeading className={cx("credit-itm-heading")}>
+          {title}
+        </SectionHeading>
+        {/* <p className={cx("section-heading")}>{title}</p> */}
 
         {/* //! Не завантажуються фото				 */}
         <img alt="credit-icon" src={imgUrl} />

@@ -14,7 +14,8 @@
 .text-subcontent {
   display: flex;
   gap: 80px;
-  margin-top: 6%;
+  margin-top: 60px;
+  color: var(--text-color-white);
 }
 
 .text-subcontent div span {
@@ -30,4 +31,9 @@
   margin-top: 18px;
   font-size: 18px;
   font-weight: 400;
+}
+
+.hero-heading {
+  margin-top: 163px;
+  margin-bottom: 0;
 }

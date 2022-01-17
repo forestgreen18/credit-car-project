@@ -3,6 +3,7 @@ import React from "react";
 import css from "./style.module.css";
 import cn from "classnames/bind";
 import Bank from "./bank";
+import SectionHeading from "../shared/headings/section_heading";
 
 import absoulte from "./assets/absolute.svg";
 import absoulteGray from "./assets/absolutebank_gray.svg";
@@ -152,9 +153,9 @@ const Banks = () => {
   return (
     <section className={cx("bank-section")}>
       <div className={cx("bank-heading")}>
-        <p className={cx("section-heading")}>
+        <SectionHeading customClass={cx("bank-heading")}>
           Crystal motors - <br /> партнёр 15 банков
-        </p>
+        </SectionHeading>
         <span className={cx("desc-paragraph")}>
           Оказываем услуги по автокредитованию. Это позволяет <br />
           оперативно получать лучшие предложение по кредитам.
