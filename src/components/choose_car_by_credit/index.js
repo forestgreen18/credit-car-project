@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeading from "../shared/headings/section_heading";
-import CreditSlider from "./CreditSlider";
+import CreditSlider from "../shared/CreditSlider";
 
 import css from "./style.module.css";
 import cn from "classnames/bind";

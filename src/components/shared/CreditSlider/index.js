@@ -1,6 +1,6 @@
 import React from "react";
 
-import RangeSlider from "../../shared/slider";
+import RangeSlider from "../slider";
 import css from "./style.module.css";
 import cn from "classnames/bind";
 const cx = cn.bind(css);
@@ -78,6 +78,11 @@ const yearMarks = {
   60: <div> 5 лет </div>,
 };
 
+const yearMarksCreditPage = {
+  0: <div> 0 </div>,
+  96: <div> 96 мес </div>,
+};
+
 const loadMarks = {
   0: <div> 0</div>,
   10: <div> 10%</div>,
@@ -87,7 +92,13 @@ const loadMarks = {
   50: <div> 50% </div>,
 };
 
-function CreditSlider({ type }) {
+const loadMarksCreditPage = {
+  0: <div> 0 %</div>,
+
+  50: <div> 50% </div>,
+};
+
+function CreditSlider({ type, subtype }) {
   const [state, setState] = React.useState(0);
   let formattedData;
   let options;
@@ -100,21 +111,41 @@ function CreditSlider({ type }) {
       subHeading: "Желаемая сумма кредита",
     };
   } else if (type == "termOfCredit") {
-    formattedData = getFormattedYears(state);
-    options = {
-      marks: yearMarks,
-      max: 60,
-      step: 1,
-      subHeading: "Желаемый срок кредита",
-    };
+    if (subtype == "credit-page") {
+      formattedData = getFormattedYears(state);
+      options = {
+        marks: yearMarksCreditPage,
+        max: 96,
+        step: 1,
+        subHeading: "Желаемый срок кредита",
+      };
+    } else {
+      formattedData = getFormattedYears(state);
+      options = {
+        marks: yearMarks,
+        max: 96,
+        step: 1,
+        subHeading: "Желаемый срок кредита",
+      };
+    }
   } else if (type == "initialLoan") {
-    formattedData = getFormattedLoan(state);
-    options = {
-      marks: loadMarks,
-      max: 50,
-      step: 1,
-      subHeading: "Первый взнос",
-    };
+    if (subtype == "credit-page") {
+      formattedData = getFormattedLoan(state);
+      options = {
+        marks: loadMarksCreditPage,
+        max: 50,
+        step: 1,
+        subHeading: "Первый взнос",
+      };
+    } else {
+      formattedData = getFormattedLoan(state);
+      options = {
+        marks: loadMarks,
+        max: 50,
+        step: 1,
+        subHeading: "Первый взнос",
+      };
+    }
   }
   //   const formattedData = getFormattedYears(state);
 

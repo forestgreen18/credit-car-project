@@ -1,0 +1,79 @@
+.append-heading-block {
+  position: relative;
+}
+
+.append-heading-block::before {
+  content: "02";
+
+  position: absolute;
+  top: 0;
+  left: -44px;
+  font-size: 24px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--bg-color-blue);
+}
+
+.buyer-inputs {
+  margin-top: 30px;
+}
+
+.buyer-inputs .name-and-phone,
+.confidant-info {
+  display: grid;
+  grid-template-columns: 29fr 14fr 14fr;
+  grid-column-gap: 20px;
+  padding-bottom: 20px;
+}
+
+.choosecar {
+  margin-top: 80px;
+}
+
+.сonfidants {
+  margin-top: 80px;
+}
+
+.confidant-info {
+}
+
+.confirmation {
+  margin-top: 30px;
+}
+
+.confidants-inputs {
+  margin-top: 30px;
+}
+
+.confirmation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 50px;
+}
+
+.confirmation p {
+  font-size: 16px;
+  color: var(--dark-color);
+}
+
+.confirmation span {
+  position: relative;
+  color: var(--bg-color-blue);
+}
+
+.confirmation span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 90%;
+  left: 0;
+
+  background: var(--bg-color-blue);
+}
+
+.confirmation-btn {
+  margin-top: 0;
+}

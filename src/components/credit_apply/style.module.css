@@ -6,30 +6,3 @@
   margin-top: 88px;
   margin-bottom: 60px;
 }
-
-.credit-subheading {
-}
-
-.append-headingb-block {
-  position: relative;
-}
-
-.append-headingb-block::before {
-  content: "01";
-
-  position: absolute;
-  top: 0;
-  left: -44px;
-  font-size: 24px;
-  line-height: 1.6;
-  font-weight: 700;
-  color: var(--bg-color-blue);
-}
-
-.option-block {
-  margin-top: 25px;
-
-  display: grid;
-  grid-template-columns: repeat(2, minmax(auto, 280px));
-  grid-column-gap: 20px;
-}

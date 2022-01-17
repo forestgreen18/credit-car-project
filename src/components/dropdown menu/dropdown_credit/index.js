@@ -89,17 +89,20 @@ const Control = ({ children, ...props }) => {
 
   return (
     <components.Control {...props}>
-      <span className={cx("subheading-dropdown")}>Марка авто</span>
+      <span className={cx("subheading-dropdown")}>
+        {props.selectProps.subheading}
+      </span>
       <div style={style}>{children}</div>
     </components.Control>
   );
 };
 
 const DropdownMenuCredit = (props) => {
-  const { options } = props;
+  const { options, subheading } = props;
 
   return (
     <Select
+      subheading={subheading}
       styles={customStyles}
       defaultValue={options[0]}
       options={options}

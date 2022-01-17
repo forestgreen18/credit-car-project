@@ -1,0 +1,49 @@
+.credit-subheading {
+}
+
+.append-heading-block {
+  position: relative;
+}
+
+.append-heading-block::before {
+  content: "01";
+
+  position: absolute;
+  top: 0;
+  left: -44px;
+  font-size: 24px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--bg-color-blue);
+}
+
+.choosecar {
+  /* margin-top: 80px; */
+}
+
+.option-block {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 280px));
+  grid-column-gap: 20px;
+}
+
+.credit-car-block {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+}
+
+.divider {
+  height: 2px;
+
+  margin-top: 90px;
+  margin-bottom: 50px;
+  background: #d6d6d6;
+}
+
+.price-block {
+  display: flex;
+  gap: 80px;
+}

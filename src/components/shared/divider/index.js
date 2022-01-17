@@ -4,8 +4,8 @@ import css from "./style.module.css";
 import cn from "classnames/bind";
 const cx = cn.bind(css);
 
-const Divider = () => {
-  return <div className={cx("divider")}></div>;
+const Divider = ({ customClass = {} }) => {
+  return <div className={cx("divider", customClass)}></div>;
 };
 
 export default Divider;
