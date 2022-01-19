@@ -83,7 +83,7 @@ const yearMarksCreditPage = {
   96: <div> 96 мес </div>,
 };
 
-const loadMarks = {
+const loanMarks = {
   0: <div> 0</div>,
   10: <div> 10%</div>,
   20: <div> 20% </div>,
@@ -92,7 +92,7 @@ const loadMarks = {
   50: <div> 50% </div>,
 };
 
-const loadMarksCreditPage = {
+const loanMarksCreditPage = {
   0: <div> 0 %</div>,
 
   50: <div> 50% </div>,
@@ -123,7 +123,7 @@ function CreditSlider({ type, subtype }) {
       formattedData = getFormattedYears(state);
       options = {
         marks: yearMarks,
-        max: 96,
+        max: 60,
         step: 1,
         subHeading: "Желаемый срок кредита",
       };
@@ -132,7 +132,7 @@ function CreditSlider({ type, subtype }) {
     if (subtype == "credit-page") {
       formattedData = getFormattedLoan(state);
       options = {
-        marks: loadMarksCreditPage,
+        marks: loanMarksCreditPage,
         max: 50,
         step: 1,
         subHeading: "Первый взнос",
@@ -140,7 +140,7 @@ function CreditSlider({ type, subtype }) {
     } else {
       formattedData = getFormattedLoan(state);
       options = {
-        marks: loadMarks,
+        marks: loanMarks,
         max: 50,
         step: 1,
         subHeading: "Первый взнос",

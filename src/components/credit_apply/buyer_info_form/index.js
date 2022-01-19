@@ -3,7 +3,7 @@ import css from "./style.module.css";
 import cn from "classnames/bind";
 import Input from "./input_itm";
 import { useFetch } from "../../../hooks/useFetch";
-import { useForm, FormProvider, useFormContext } from "react-hook-form";
+import { useForm, useWatch, useFormContext } from "react-hook-form";
 import Subheading from "../../shared/headings/subheading";
 import DropdownMenuCredit from "../../dropdown menu/dropdown_credit";
 import Button from "../../shared/button";
@@ -11,17 +11,22 @@ import Button from "../../shared/button";
 const cx = cn.bind(css);
 
 const BuyerInfoForm = () => {
-  const { response } = useFetch(
-    "auto/categories/1/marks?api_key=AJExiG5NOgeHUD44enPoMytv92EbOBoOpXq9JF6o"
-  );
+  const { register, control, resetField } = useFormContext();
 
   const confidants = [
     { value: "relative", label: "Родственник" },
     { value: "wife/husband", label: "Муж/Жена" },
   ];
 
-  const methods = useForm();
-  const onSubmit = (data) => console.log(data);
+  const inputName = useWatch({
+    control,
+    name: "buyerNameInfo", // without supply name will watch the entire form, or ['firstName', 'lastName'] to watch both
+  });
+
+  React.useEffect(() => {
+    console.log(inputName);
+  }, [inputName]);
+
   return (
     <div className={cx("choosecar")}>
       <div className={cx("buyer-info")}>
@@ -31,13 +36,26 @@ const BuyerInfoForm = () => {
         <div className={cx("buyer-inputs")}>
           <div className={cx("name-and-phone")}>
             <Input
+              control={control}
+              formName="buyerNameInfo"
               value={"Болтовский Сергей Николаевич"}
               subheading={"Полное ФИО"}
             />
 
-            <Input value={"8-913-107-07-25"} subheading={"Мобильный телефон"} />
+            <Input
+              formName="buyerPhoneNumber"
+              control={control}
+              value={"8-913-107-07-25"}
+              type="tel"
+              subheading={"Мобильный телефон"}
+            />
 
-            <Input value={"Рабочий телефон"} />
+            <Input
+              placeholder={"Рабочий телефон"}
+              type="tel"
+              control={control}
+              formName="workingPhone"
+            />
           </div>
           <div>
             <Input
@@ -54,7 +72,11 @@ const BuyerInfoForm = () => {
           <div className={cx("confidant-info")}>
             <Input value={"Игорь Николевич "} subheading={"ФИО"} />
 
-            <Input value={"8 913-104-39-89"} subheading={"Мобильный телефон"} />
+            <Input
+              value={"8 913-104-39-89"}
+              type="tel"
+              subheading={"Мобильный телефон"}
+            />
 
             <DropdownMenuCredit
               options={confidants}

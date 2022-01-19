@@ -7,7 +7,6 @@ import shieldIcon from "./assets/shield_icon.svg";
 const cx = cn.bind(css);
 
 const CarCard = ({ autoInfo }) => {
-  console.log(autoInfo);
   const { imgURL, year, name, price, safePrice, credit } = autoInfo;
   return (
     <div className={cx("car-card")}>

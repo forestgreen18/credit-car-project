@@ -12,14 +12,9 @@ import BuyerInfoForm from "./buyer_info_form";
 const cx = cn.bind(css);
 
 const CreditApply = () => {
-  const { response } = useFetch(
-    "auto/categories/1/marks?api_key=AJExiG5NOgeHUD44enPoMytv92EbOBoOpXq9JF6o"
-  );
-
-  const carList = [
-    { value: "Hyundai", label: "Hyundai" },
-    { value: "Solaris", label: "Solaris" },
-  ];
+  // const { response } = useFetch(
+  //   "auto/categories/1/marks?api_key=AJExiG5NOgeHUD44enPoMytv92EbOBoOpXq9JF6o"
+  // );
 
   const methods = useForm();
   const onSubmit = (data) => console.log(data);
@@ -33,16 +28,15 @@ const CreditApply = () => {
           на автокредит
         </MainHeading>
 
-        <ChooseCarForm />
-        <BuyerInfoForm />
+        <FormProvider {...methods}>
+          <form onSubmit={methods.handleSubmit(onSubmit)}>
+            <ChooseCarForm />
+            <BuyerInfoForm />
+          </form>
+        </FormProvider>
       </div>
     </section>
   );
 };
-
-function NestedInput() {
-  const { register } = useFormContext(); // retrieve all hook methods
-  return <input {...register("test")} />;
-}
 
 export default CreditApply;

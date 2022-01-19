@@ -1,4 +1,6 @@
 import React, { Fragment } from "react";
+import { useController, Controller, useWatch } from "react-hook-form";
+
 import Select, { components, IndicatorsContainerProps } from "react-select";
 import css from "./style.module.css";
 import cn from "classnames/bind";
@@ -85,7 +87,6 @@ const DropdownIndicator = (props) => {
 
 const Control = ({ children, ...props }) => {
   const style = { cursor: "pointer", display: "flex", width: "100%" };
-  console.log(props);
 
   return (
     <components.Control {...props}>
@@ -98,15 +99,30 @@ const Control = ({ children, ...props }) => {
 };
 
 const DropdownMenuCredit = (props) => {
-  const { options, subheading } = props;
+  const { options, subheading, formName, control, disabled = false } = props;
 
   return (
-    <Select
-      subheading={subheading}
-      styles={customStyles}
-      defaultValue={options[0]}
-      options={options}
-      components={{ Menu, DropdownIndicator, Control }}
+    <Controller
+      control={control}
+      name={formName}
+      render={({
+        field: { onChange, onBlur, value, name, ref },
+        fieldState: { invalid, isTouched, isDirty, error },
+        formState,
+      }) => (
+        <Select
+          isDisabled={disabled}
+          value={options.find((c) => c.value === value)}
+          onChange={(val) => onChange(val.value)}
+          name={name}
+          subheading={subheading}
+          styles={customStyles}
+          defaultValue={options[0]}
+          options={options}
+          components={{ Menu, DropdownIndicator, Control }}
+          innerRef={ref}
+        />
+      )}
     />
   );
 };

@@ -23,23 +23,25 @@ const useFetch = (
   };
 
   React.useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
+    if (endpoint) {
+      const fetchData = async () => {
+        setIsLoading(true);
 
-      try {
-        const res = await fetch(`${url}/${endpoint}`, config);
-        const json = await res.json();
+        try {
+          const res = await fetch(`${url}/${endpoint}`, config);
+          const json = await res.json();
 
-        setResponse(json);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+          setResponse(json);
+        } catch (error) {
+          setError(error);
+        } finally {
+          setIsLoading(false);
+        }
+      };
 
-    fetchData();
-  }, []);
+      fetchData();
+    }
+  }, [endpoint]);
 
   return { response, error, isLoading };
 };
