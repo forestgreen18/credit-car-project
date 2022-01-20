@@ -47,3 +47,7 @@
   display: flex;
   gap: 80px;
 }
+
+.rc-slider-mark {
+  color: red;
+}

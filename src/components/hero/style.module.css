@@ -1,5 +1,5 @@
 .root-hero {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   min-height: 980px;
   z-index: 12;
 }
@@ -36,4 +36,8 @@
 .hero-heading {
   margin-top: 163px;
   margin-bottom: 0;
+}
+
+.hero-btn {
+  margin-top: 41px;
 }

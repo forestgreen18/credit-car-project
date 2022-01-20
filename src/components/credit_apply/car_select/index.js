@@ -27,12 +27,26 @@ const autoInfo = [
 
 const cx = cn.bind(css);
 
-const CarSelect = () => {
+function formatHeading(amountOfCars) {
+  if (amountOfCars > 1 && amountOfCars < 5) {
+    return `Найдено ${amountOfCars} автомобиля`;
+  } else if (amountOfCars >= 5) {
+    return `Найдено ${amountOfCars} автомобилей`;
+  } else if (amountOfCars === 1) {
+    return `Найдено 1 автомобиль`;
+  } else {
+    return "Автомобилей не найдено";
+  }
+}
+
+const CarSelect = ({ carList = [] }) => {
+  const amountOfCarsHeading = formatHeading(carList.length);
+
   return (
     <div>
-      <h4 className={cx("car-select-heading")}>Найдено 2 автомобиля</h4>
+      <h4 className={cx("car-select-heading")}>{amountOfCarsHeading}</h4>
       <div className={cx("select-car")}>
-        {autoInfo.map((auto) => {
+        {carList.map((auto) => {
           return <CarCard autoInfo={auto} />;
         })}
       </div>

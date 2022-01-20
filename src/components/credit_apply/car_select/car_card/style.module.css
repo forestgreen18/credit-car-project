@@ -19,6 +19,7 @@
 }
 
 .car-name {
+  margin-top: 5px;
   font-size: 18px;
   line-height: 1.2;
   color: var(--bg-color-blue);
@@ -69,4 +70,11 @@
 .checkbox-block {
   margin-top: 25px;
   padding-bottom: 27px;
+}
+
+.info-img-title {
+  width: 100%;
+  height: 270px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }

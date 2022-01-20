@@ -68,7 +68,7 @@ const Checkbox = ({ className, checked, ...props }) => {
   );
 };
 
-const CarCheckbox = ({ text }) => {
+const CarCheckbox = ({ text, id }) => {
   const [checked, setChecked] = React.useState(false);
 
   const handleCheckboxChange = (event) => {
@@ -78,11 +78,17 @@ const CarCheckbox = ({ text }) => {
   return (
     <div className={cx("car-checkbox-block")}>
       <label
-        for="car"
+        for={id}
         className={cx("car-checkbox", `${checked ? "checked" : ""}`)}
       >
         <span>{text}</span>
-        <input id="car" type="radio" onChange={handleCheckboxChange} />
+        <input
+          id={id}
+          type="radio"
+          name={id}
+          value={id}
+          onChange={handleCheckboxChange}
+        />
         <div className={cx("checkmark")}></div>
       </label>
     </div>

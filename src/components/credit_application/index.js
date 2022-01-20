@@ -14,12 +14,11 @@ const CreditApplication = () => {
         через 10 минут
       </SectionHeading>
 
-      {/* <p className={cx("heading", "credit-heading")}>
-        Оформи заявку онлайн <br />
-        и получи решение <br />
-        через 10 минут
-      </p> */}
-      <Button title={"Подать заявку"} color={"red"} />
+      <Button
+        title={"Подать заявку"}
+        color={"red"}
+        customClass={cx("credit-application-section-btn")}
+      />
     </section>
   );
 };

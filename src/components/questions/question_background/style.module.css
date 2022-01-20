@@ -2,6 +2,7 @@
   background: var(--bg-color-blue);
   position: relative;
   padding-bottom: 190px;
+  box-sizing: border-box;
 }
 
 .question-img {

@@ -1,6 +1,10 @@
 import React from "react";
 import Slider from "rc-slider";
+import css from "./style.module.css";
+import cn from "classnames/bind";
+
 import "rc-slider/assets/index.css";
+const cx = cn.bind(css);
 
 const RangeSlider = ({
   value,
@@ -9,6 +13,7 @@ const RangeSlider = ({
   min = 0,
   max = 60,
   step = 1,
+  customClass = {},
 }) => {
   return (
     <>

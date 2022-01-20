@@ -11,3 +11,7 @@
   margin-top: 10px;
   color: var(--bg-color-blue);
 }
+
+.rc-slider-mark {
+  margin-top: 25px;
+}

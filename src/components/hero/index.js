@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "../shared/header";
 
+import { NavLink, useNavigate } from "react-router-dom";
+
 import css from "./style.module.css";
 import cn from "classnames/bind";
 import Button from "../shared/button";
@@ -9,6 +11,8 @@ import MainHeading from "../shared/headings/main_heading";
 const cx = cn.bind(css);
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className={cx("root-hero")}>
       <Header type="blue" />
@@ -42,7 +46,9 @@ const Hero = () => {
           </div>
         </div>
 
-        <Button title={"Завка на кредит"} color={"red"} />
+        <NavLink to={"/credit-page"} className={cx("hero-btn")}>
+          <Button title={"Завка на кредит"} color={"red"} />
+        </NavLink>
       </div>
     </section>
   );

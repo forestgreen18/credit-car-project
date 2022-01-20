@@ -1,5 +1,5 @@
 .copyright-block {
-  border: 1px solid blue;
+  border: 0.1px solid transparent;
   display: flex;
   align-items: baseline;
   justify-content: space-between;

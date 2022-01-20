@@ -79,7 +79,7 @@ const yearMarks = {
 };
 
 const yearMarksCreditPage = {
-  0: <div> 0 </div>,
+  1: <div> 1 мес </div>,
   96: <div> 96 мес </div>,
 };
 

@@ -19,6 +19,10 @@
   color: var(--text-color-white);
 }
 
+.credit-application-section-btn {
+  margin-top: 60px;
+}
+
 a {
   margin-top: 20px;
 }

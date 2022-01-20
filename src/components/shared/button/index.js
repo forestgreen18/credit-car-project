@@ -4,11 +4,7 @@ import cn from "classnames/bind";
 const cx = cn.bind(css);
 
 const Button = ({ title, color, customClass = {} }) => {
-  return (
-    <a className={cx("button", `btn-${color}`, customClass)} href="#">
-      {title}
-    </a>
-  );
+  return <a className={cx("button", `btn-${color}`, customClass)}>{title}</a>;
 };
 
 export default Button;

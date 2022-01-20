@@ -8,7 +8,7 @@ const SectionHeading = ({ children, span, customClass = {} }) => {
   return (
     <h2 className={cx("section-heading", customClass)}>
       {children}
-      <span>{span}</span>
+      <span className={cx("section-span")}>{span}</span>
     </h2>
   );
 };

@@ -41,13 +41,15 @@ const ChooseCarForm = () => {
   });
 
   // React.useEffect(() => {
-  //   const {
-  //     formattedCarArticles: carArticles,
-  //     errors: articlesErrors,
-  //     loading: articlesLoading,
-  //   } = useCarArticles(carMark, carModel);
-  //   console.log(carArticles);
+
   // }, [carModel]);
+
+  const {
+    cars: carsInfo,
+    errors: articlesErrors,
+    loading: articlesLoading,
+  } = useCarArticles(carMark, carModel);
+  console.log(carsInfo, " choose car form");
 
   return (
     <div className={cx("choosecar")}>
@@ -73,7 +75,7 @@ const ChooseCarForm = () => {
         />
       </div>
       <div className={cx("choosing-car")}>
-        <CarSelect />
+        <CarSelect carList={carsInfo} />
       </div>
       <div className={cx("credit-car-block")}>
         <CreditSlider type={"termOfCredit"} subtype={"credit-page"} />
@@ -84,7 +86,7 @@ const ChooseCarForm = () => {
         <PriceItm title={"Стоимость авто"} price={"349 000  ₽"} />
         <PriceItm title={"Ежемесячный платёж"} price={"15 000  ₽"} />
       </div>
-      <button type="submit">SUbmit</button>
+      {/* <button type="submit">SUbmit</button> */}
     </div>
   );
 };

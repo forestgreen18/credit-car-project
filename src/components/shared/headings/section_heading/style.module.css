@@ -6,5 +6,5 @@
 }
 
 .section-span {
-  color: wheat;
+  color: var(--bg-color-blue);
 }
