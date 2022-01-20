@@ -3,17 +3,22 @@
 Зробив десктоп версію, кожна секція має свій компонент, функціональні компоненти розбиті по папкам.
 
 Ті, що використовуються в декількох секціях розміщені в папці **shared**
+
 ## Сторінка "Автокредит"
 
 ### Hero section
-Для меню міст я використовував бібліотеку [React Select](https://react-select.com/home)
-### В секції "Подбор автомобиля под условия кредита" 
-для слайдерів я використовував бібліотеку [rc-slider](https://react-component.github.io/slider/?path=/story/rc-slider--readme)
+
+Для меню міст я використовую бібліотеку [React Select](https://react-select.com/home)
+
+### В секції "Подбор автомобиля под условия кредита"
+
+для слайдерів я використовую бібліотеку [rc-slider](https://react-component.github.io/slider/?path=/story/rc-slider--readme)
 
 ## Сторінка "Оформление заявки на автокредит"
+
 Для роботи з формою я використовую бібліотеку [React Hook Form](https://react-hook-form.com/)
 
-Для вибору авто я також використовував [React Select](https://react-select.com/home), а для кредиту - [rc-slider](https://react-component.github.io/slider/?path=/story/rc-slider--readme)
+Для вибору авто я також використовую [React Select](https://react-select.com/home), а для кредиту - [rc-slider](https://react-component.github.io/slider/?path=/story/rc-slider--readme)
 
 На цей час є можливість вибору авто, але розрахунку суми кредиту ще немає, працюю над цим.
 
