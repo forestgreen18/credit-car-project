@@ -6,6 +6,8 @@ import { cities } from "./mock";
 import logo from "./assets/logo.png";
 import blueLogo from "./assets/blue_logo.svg";
 
+import { NavLink } from "react-router-dom";
+
 import phoneIcon from "./assets/phone_icon.png";
 import bluePhoneIcon from "./assets/blue_phone_icon.svg";
 
@@ -28,7 +30,9 @@ const Header = ({ type = "blue" }) => {
 
   return (
     <header className={cx("header", `${options.class}`)}>
-      <img src={options.img} alt="logo" />
+      <NavLink to={"/"}>
+        <img src={options.img} alt="logo" />
+      </NavLink>
       <nav>
         <ul className={cx("header-menu-list", `${options.class}`)}>
           <li>

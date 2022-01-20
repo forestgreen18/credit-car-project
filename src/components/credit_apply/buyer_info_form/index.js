@@ -24,7 +24,7 @@ const BuyerInfoForm = () => {
   });
 
   React.useEffect(() => {
-    console.log(inputName);
+    // console.log(inputName);
   }, [inputName]);
 
   return (

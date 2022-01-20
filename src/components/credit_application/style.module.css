@@ -17,6 +17,7 @@
 
 .credit-heading {
   color: var(--text-color-white);
+  margin-bottom: 0;
 }
 
 .credit-application-section-btn {

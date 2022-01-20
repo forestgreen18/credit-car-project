@@ -45,9 +45,6 @@ export function useCarArticles(markID, modelID) {
   }
 
   const { response: carArticles, errors, loading } = useFetch(route);
-  if (carArticles) {
-    console.log(carArticles.result.search_result.ids, "carArticles");
-  }
 
   const formattedCarArticles = carArticles?.result.search_result.ids;
   const [cars, setCars] = React.useState();
@@ -62,7 +59,6 @@ export function useCarArticles(markID, modelID) {
       Promise.all(formattedCarArticlesPromise)
         .then((responses) =>
           responses.map((r) => {
-            console.log(r);
             return {
               price: r.USD,
               year: r.autoData.year,
@@ -76,7 +72,6 @@ export function useCarArticles(markID, modelID) {
           })
         )
         .then((data) => {
-          console.log(data);
           setCars(data);
         })
         .catch((err) => {

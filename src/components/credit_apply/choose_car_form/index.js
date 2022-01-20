@@ -49,7 +49,6 @@ const ChooseCarForm = () => {
     errors: articlesErrors,
     loading: articlesLoading,
   } = useCarArticles(carMark, carModel);
-  console.log(carsInfo, " choose car form");
 
   return (
     <div className={cx("choosecar")}>

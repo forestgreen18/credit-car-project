@@ -46,6 +46,7 @@ const Credit = () => {
         {config.map((item) => {
           return (
             <CreditItem
+              key={item.title}
               title={item.title}
               desc={item.desc}
               imgUrl={item.imgUrl}

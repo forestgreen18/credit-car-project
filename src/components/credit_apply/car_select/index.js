@@ -47,7 +47,7 @@ const CarSelect = ({ carList = [] }) => {
       <h4 className={cx("car-select-heading")}>{amountOfCarsHeading}</h4>
       <div className={cx("select-car")}>
         {carList.map((auto) => {
-          return <CarCard autoInfo={auto} />;
+          return <CarCard key={auto.id} autoInfo={auto} />;
         })}
       </div>
     </div>

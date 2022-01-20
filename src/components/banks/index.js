@@ -166,6 +166,7 @@ const Banks = () => {
           {banksInfo.map((bank) => {
             return (
               <Bank
+                key={bank.alt}
                 imgUrl={bank.imgUrl}
                 imgGrayUrl={bank.imgGrayUrl}
                 alt={bank.alt}

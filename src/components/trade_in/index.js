@@ -19,7 +19,11 @@ const TradeIn = () => {
         </span>
         <div className={cx("buttons-block", "tradein-buttons")}>
           <div>
-            <Button title={"Оставить заявку"} color={"blue"} />
+            <Button
+              title={"Оставить заявку"}
+              color={"blue"}
+              customClass={cx("input-btn")}
+            />
           </div>
           <div>
             <Button title={"Подробнее"} color={"white"} />

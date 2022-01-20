@@ -78,7 +78,7 @@ const CarCheckbox = ({ text, id }) => {
   return (
     <div className={cx("car-checkbox-block")}>
       <label
-        for={id}
+        htmlFor={id}
         className={cx("car-checkbox", `${checked ? "checked" : ""}`)}
       >
         <span>{text}</span>

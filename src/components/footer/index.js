@@ -61,7 +61,13 @@ const Footer = () => {
     <section>
       <div className={cx("footer-listblock")}>
         {listItems.map((footerItm) => {
-          return <ListItem title={footerItm.title} items={footerItm.items} />;
+          return (
+            <ListItem
+              key={footerItm.title}
+              title={footerItm.title}
+              items={footerItm.items}
+            />
+          );
         })}
       </div>
     </section>

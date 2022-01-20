@@ -11,7 +11,7 @@ const ListItem = ({ title, items }) => {
       <ul className={cx("list-block")}>
         {items[0].map((listItm) => {
           return (
-            <li>
+            <li key={listItm}>
               <a href="#">{listItm}</a>
             </li>
           );

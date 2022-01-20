@@ -10,10 +10,10 @@ function Checkbox({ text, spanText }) {
         id="checkbox"
         className={css["checkbox"]}
         type="checkbox"
-        checked={checked}
+        defaultChecked={checked}
         onClick={() => setChecked(!checked)}
       />
-      <label for="checkbox">
+      <label htmlFor="checkbox">
         {text} &nbsp; <span className={css["checkbox-span"]}>{spanText}</span>
       </label>
     </div>

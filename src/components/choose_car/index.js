@@ -101,7 +101,9 @@ const ChooseCar = () => {
       </div>
       <div className={cx("cars-block")}>
         {config.map((item) => {
-          return <CarItem name={item.name} amount={item.amount} />;
+          return (
+            <CarItem key={item.name} name={item.name} amount={item.amount} />
+          );
         })}
       </div>
     </section>
