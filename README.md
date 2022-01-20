@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+20.01
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Зробив десктоп версію, кожна секція має свій компонент, функціональні компоненти розбиті по папкам.
 
-## Available Scripts
+Ті, що використовуються в декількох секціях розміщені в папці **shared**
+## Сторінка "Автокредит"
 
-In the project directory, you can run:
+### Hero section
+Для меню міст я використовував бібліотеку [React Select](https://react-select.com/home)
+### В секції "Подбор автомобиля под условия кредита" 
+для слайдерів я використовував бібліотеку [rc-slider](https://react-component.github.io/slider/?path=/story/rc-slider--readme)
 
-### `npm start`
+## Сторінка "Оформление заявки на автокредит"
+Для роботи з формою я використовую бібліотеку [React Hook Form](https://react-hook-form.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Для вибору авто я також використовував [React Select](https://react-select.com/home), а для кредиту - [rc-slider](https://react-component.github.io/slider/?path=/story/rc-slider--readme)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+На цей час є можливість вибору авто, але розрахунку суми кредиту ще немає, працюю над цим.
 
-### `npm test`
+Для переходу між сторінками використовую [React Router V6](https://reactrouter.com/). Щоб перейти на сторінку кредиту введіть: **/credit-page**,або натисніть кнопку "Заявка на кредит"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Отже, мені залишилося доробити форму та адаптив.
+Є деякі незначні стильові розбіжності між макетом і моїм сайтом,але я виправлю їх пізніше.
