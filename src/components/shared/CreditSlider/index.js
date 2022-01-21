@@ -48,16 +48,16 @@ const sliderOptions = {
     },
   },
   formattedFunc: {
-    getFormattedLoan(loan) {
+    getFormattedLoan(loan = 0) {
       if (loan === 0) {
         return `Без первого взноса`;
       }
       return `${loan} %`;
     },
-    getFormattedSum(sum = "") {
+    getFormattedSum(sum = 0) {
       return sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " ₴";
     },
-    getFormattedYears(months) {
+    getFormattedYears(months = 0) {
       if (months === 0) {
         return "0	";
       }
@@ -73,7 +73,7 @@ const sliderOptions = {
 
       return `${yearPhrase}  ${monthPhrase}`;
     },
-    getMonthStrings(monthNum) {
+    getMonthStrings(monthNum = 0) {
       let phrase = "";
       if (monthNum < 1) return phrase;
       if (monthNum === 1) {
@@ -103,7 +103,15 @@ const sliderOptions = {
 };
 
 function CreditSlider({ formName = "test", options }) {
-  const { marks, formattedFunc, max, step, subHeading } = options;
+  const {
+    marks,
+    formattedFunc,
+    max,
+    min = 0,
+    step,
+    subHeading,
+    defaultValue = 0,
+  } = options;
   const { control } = useFormContext();
 
   let formattedData = useWatch({
@@ -122,7 +130,7 @@ function CreditSlider({ formName = "test", options }) {
         control={control}
         name={formName}
         render={({
-          field: { onChange, onBlur, value, name, ref },
+          field: { onChange, onBlur, value = 0, name, ref },
           fieldState: { invalid, isTouched, isDirty, error },
           formState,
         }) => (
@@ -131,6 +139,7 @@ function CreditSlider({ formName = "test", options }) {
             setValue={onChange}
             marks={sliderOptions.marks[marks]}
             max={max}
+            min={min}
             step={step}
           />
         )}

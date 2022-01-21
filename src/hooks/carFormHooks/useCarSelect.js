@@ -68,6 +68,7 @@ export function useCarArticles(markID, modelID) {
               title: r.title,
               titlePhotoLink: r.photoData.seoLinkB,
               id: r.autoData.autoId,
+              initialLink: `https://auto.ria.com/uk${r.linkToView}`,
             };
           })
         )

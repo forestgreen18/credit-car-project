@@ -19,7 +19,15 @@ const cx = cn.bind(css);
 const ChooseCarForm = () => {
   const { formattedCarMarks: carList, errors, loading } = useCarMarks();
 
-  const { register, control, resetField } = useFormContext();
+  const {
+    register,
+    control,
+    resetField,
+    setValue,
+    errors: formErrors,
+  } = useFormContext();
+
+  console.log(formErrors);
 
   const carMark = useWatch({
     control,
@@ -51,10 +59,16 @@ const ChooseCarForm = () => {
     name: "selectedCar",
   });
 
-  const selectedCar =
-    carsInfo.find((car) => car.id === Number(selectedCarId)) || "";
+  const selectedCar = React.useMemo(() => {
+    const foundCar =
+      carsInfo.find((car) => car.id === Number(selectedCarId)) || "";
+    setValue("carModelTitle", foundCar.model);
+    setValue("carMarkTitle", foundCar.mark);
+    setValue("carLink", foundCar.initialLink);
+    console.log(foundCar, " selectedCar");
 
-  console.log(selectedCar, " selectedCar");
+    return foundCar;
+  }, [selectedCarId, JSON.stringify(carsInfo)]);
 
   return (
     <div className={cx("choosecar")}>
@@ -90,6 +104,7 @@ const ChooseCarForm = () => {
             marks: "yearMarksCreditPage",
             formattedFunc: "getFormattedYears",
             max: 96,
+            min: 1,
             step: 1,
             subHeading: "Желаемый срок кредита",
           }}
@@ -107,7 +122,7 @@ const ChooseCarForm = () => {
         />
       </div>
       <Divider customClass={cx("divider")} />
-      <BlockPrice carPrice={selectedCar.price} />
+      <BlockPrice carPrice={selectedCar.price} control={control} />
       <button type="submit">SUbmit</button>
     </div>
   );

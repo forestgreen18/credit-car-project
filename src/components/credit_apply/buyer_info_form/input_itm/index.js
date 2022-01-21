@@ -3,7 +3,12 @@ import cssStyles from "./style.module.css";
 import cn from "classnames/bind";
 import styled, { css } from "styled-components";
 import InputMask from "react-input-mask";
-import { useController, Controller, useWatch } from "react-hook-form";
+import {
+  useController,
+  Controller,
+  useWatch,
+  useFormContext,
+} from "react-hook-form";
 
 const cx = cn.bind(cssStyles);
 
@@ -31,14 +36,16 @@ const StyledSpan = styled.span`
 `;
 
 function PhoneInput(props) {
+  const { onChange, value, placeholder, customClass } = props;
+
   return (
     <InputMask
       mask="9-999-999-99-99"
-      onChange={props.onChange}
-      value={props.value}
+      onChange={onChange}
+      value={value}
       type="tel"
-      placeholder={props.placeholder}
-      className={cx(props.customClass)}
+      placeholder={placeholder}
+      className={cx(customClass)}
     />
   );
 }
@@ -54,6 +61,8 @@ const Input = (props) => {
   } = props;
 
   const [inputValue, setValue] = React.useState(value);
+
+  const { register } = useFormContext();
 
   function changeValue(event) {
     setValue(event.target.value);
@@ -77,7 +86,7 @@ const Input = (props) => {
                 customClass="phone-input"
                 innerRef={ref}
                 name={name}
-                onChange={(val) => onChange(val.value)}
+                onChange={onChange}
               />
             </div>
           )}
@@ -88,9 +97,26 @@ const Input = (props) => {
     return (
       <div className={cx("input-itm")}>
         <StyledSpan>{subheading}</StyledSpan>
-        <PhoneInput
-          placeholder={placeholder}
-          customClass="phone-input-single"
+
+        <Controller
+          control={control}
+          name={formName}
+          render={({
+            field: { onChange, onBlur, value, name, ref },
+            fieldState: { invalid, isTouched, isDirty, error },
+            formState,
+          }) => (
+            <div className={cx("input-itm")}>
+              <StyledSpan>{subheading}</StyledSpan>
+              <PhoneInput
+                placeholder={placeholder}
+                customClass="phone-input-single"
+                innerRef={ref}
+                name={name}
+                onChange={onChange}
+              />
+            </div>
+          )}
         />
       </div>
     );
@@ -98,12 +124,27 @@ const Input = (props) => {
     return (
       <div className={cx("input-itm")}>
         <StyledSpan>{subheading}</StyledSpan>
-        <StyledInput
-          value={inputValue}
-          type={type}
-          onChange={changeValue}
-          single={!subheading ? true : false}
-          placeholder={placeholder}
+
+        <Controller
+          control={control}
+          name={formName}
+          render={({
+            field: { onChange, onBlur, value, name, ref },
+            fieldState: { invalid, isTouched, isDirty, error },
+            formState,
+          }) => (
+            <div className={cx("input-itm")}>
+              <StyledInput
+                value={value}
+                type={type}
+                single={!subheading ? true : false}
+                placeholder={placeholder}
+                innerRef={ref}
+                name={name}
+                onChange={onChange}
+              />
+            </div>
+          )}
         />
       </div>
     );

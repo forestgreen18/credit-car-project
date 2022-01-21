@@ -117,7 +117,7 @@ const DropdownMenuCredit = (props) => {
           name={name}
           subheading={subheading}
           styles={customStyles}
-          defaultValue={options[0]}
+          defaultValue={null}
           options={options}
           components={{ Menu, DropdownIndicator, Control }}
           innerRef={ref}

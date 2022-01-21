@@ -59,6 +59,8 @@ const BuyerInfoForm = () => {
           </div>
           <div>
             <Input
+              formName="buyerAddress"
+              control={control}
               value={"Томская обл., п.Светлый, д. 15 кв 57"}
               subheading={"Адрес фактического проживания "}
             />
@@ -70,15 +72,24 @@ const BuyerInfoForm = () => {
 
         <div className={cx("confidants-inputs")}>
           <div className={cx("confidant-info")}>
-            <Input value={"Игорь Николевич "} subheading={"ФИО"} />
+            <Input
+              value={"Игорь Николевич "}
+              subheading={"ФИО"}
+              formName="confidantName"
+              control={control}
+            />
 
             <Input
               value={"8 913-104-39-89"}
               type="tel"
               subheading={"Мобильный телефон"}
+              formName="confidantPhone"
+              control={control}
             />
 
             <DropdownMenuCredit
+              formName="confidantType"
+              control={control}
               options={confidants}
               subheading={"Кем приходится"}
             />
