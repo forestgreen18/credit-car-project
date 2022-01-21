@@ -31,6 +31,7 @@ const CreditApply = () => {
         <FormProvider {...methods}>
           <form onSubmit={methods.handleSubmit(onSubmit)}>
             <ChooseCarForm />
+
             <BuyerInfoForm />
           </form>
         </FormProvider>

@@ -10,7 +10,7 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
-const CarCard = ({ autoInfo }) => {
+const CarCard = ({ autoInfo, formName }) => {
   let {
     titlePhotoLink,
     model,
@@ -24,7 +24,7 @@ const CarCard = ({ autoInfo }) => {
     id,
   } = autoInfo;
 
-  price = numberWithCommas(price) + " $";
+  price = numberWithCommas(price) + " ₴";
 
   return (
     <div className={cx("car-card")}>
@@ -39,17 +39,21 @@ const CarCard = ({ autoInfo }) => {
         <div className={cx("price-block")}>
           <div className={cx("standard-price")}>
             <span>{price} </span>
-            <span>от 15 000 Р / мес.</span>
+            <span>от 15 000 ₴ / мес.</span>
           </div>
           <div className={cx("credit-price")}>
             <span>
               {price} <img src={shieldIcon} alt="shield icon" />
             </span>
-            <span>от 15 000 Р / мес.</span>
+            <span>от 15 000 ₴ / мес.</span>
           </div>
         </div>
         <div className={cx("checkbox-block")}>
-          <CarCheckbox text={"Выбрано это авто"} id={id} />
+          <CarCheckbox
+            formName={"selectedCar"}
+            text={"Выбрано это авто"}
+            id={id}
+          />
         </div>
       </div>
     </div>

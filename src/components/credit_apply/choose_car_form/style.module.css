@@ -43,11 +43,6 @@
   background: #d6d6d6;
 }
 
-.price-block {
-  display: flex;
-  gap: 80px;
-}
-
 .rc-slider-mark {
   color: red;
 }

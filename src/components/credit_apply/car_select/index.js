@@ -6,25 +6,6 @@ import CarCard from "./car_card";
 import hyundai13 from "./assets/hyundai 13.jpg";
 import hyundai16 from "./assets/hyundai 16.jpg";
 
-const autoInfo = [
-  {
-    imgURL: hyundai13,
-    year: `2013 год / автомат`,
-    name: `Hyundai Solaris 2013 года`,
-    price: `499 000 ₽`,
-    safePrice: `459 000 ₽`,
-    credit: `от 15 000 Р / мес.`,
-  },
-  {
-    imgURL: hyundai16,
-    year: `2016 год / автомат`,
-    name: `Hyundai Solaris 2016`,
-    price: `499 000 ₽`,
-    safePrice: `459 000 ₽`,
-    credit: `от 15 000 Р / мес.`,
-  },
-];
-
 const cx = cn.bind(css);
 
 function formatHeading(amountOfCars) {
@@ -39,7 +20,7 @@ function formatHeading(amountOfCars) {
   }
 }
 
-const CarSelect = ({ carList = [] }) => {
+const CarSelect = ({ carList = [], formName }) => {
   const amountOfCarsHeading = formatHeading(carList.length);
 
   return (
@@ -47,7 +28,7 @@ const CarSelect = ({ carList = [] }) => {
       <h4 className={cx("car-select-heading")}>{amountOfCarsHeading}</h4>
       <div className={cx("select-car")}>
         {carList.map((auto) => {
-          return <CarCard key={auto.id} autoInfo={auto} />;
+          return <CarCard formName={formName} key={auto.id} autoInfo={auto} />;
         })}
       </div>
     </div>

@@ -3,6 +3,7 @@ import css from "./style.module.css";
 import cn from "classnames/bind";
 import styled from "styled-components";
 import arrow from "./assets/arrow.svg";
+import { useFormContext, useWatch } from "react-hook-form";
 
 const cx = cn.bind(css);
 
@@ -68,12 +69,14 @@ const Checkbox = ({ className, checked, ...props }) => {
   );
 };
 
-const CarCheckbox = ({ text, id }) => {
-  const [checked, setChecked] = React.useState(false);
+const CarCheckbox = ({ text, id, formName }) => {
+  const { register } = useFormContext();
 
-  const handleCheckboxChange = (event) => {
-    setChecked(event.target.checked);
-  };
+  const carID = useWatch({
+    name: formName,
+  });
+
+  const checked = id === Number(carID);
 
   return (
     <div className={cx("car-checkbox-block")}>
@@ -83,11 +86,11 @@ const CarCheckbox = ({ text, id }) => {
       >
         <span>{text}</span>
         <input
+          {...register(formName)}
           id={id}
           type="radio"
-          name={id}
+          name={formName}
           value={id}
-          onChange={handleCheckboxChange}
         />
         <div className={cx("checkmark")}></div>
       </label>

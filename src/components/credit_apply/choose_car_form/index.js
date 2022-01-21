@@ -13,6 +13,7 @@ import CarSelect from "../car_select";
 import CreditSlider from "../../shared/CreditSlider";
 import Divider from "../../shared/divider";
 import PriceItm from "./price_item";
+import BlockPrice from "./block_price";
 const cx = cn.bind(css);
 
 const ChooseCarForm = () => {
@@ -40,15 +41,20 @@ const ChooseCarForm = () => {
     name: "car_model",
   });
 
-  // React.useEffect(() => {
-
-  // }, [carModel]);
-
   const {
-    cars: carsInfo,
+    cars: carsInfo = [],
     errors: articlesErrors,
     loading: articlesLoading,
   } = useCarArticles(carMark, carModel);
+  const selectedCarId = useWatch({
+    control,
+    name: "selectedCar",
+  });
+
+  const selectedCar =
+    carsInfo.find((car) => car.id === Number(selectedCarId)) || "";
+
+  console.log(selectedCar, " selectedCar");
 
   return (
     <div className={cx("choosecar")}>
@@ -70,22 +76,39 @@ const ChooseCarForm = () => {
           subheading={"Модель"}
           formName="car_model"
           control={control}
-          disabled={!Boolean(carMark)}
+          disabled={!carMark}
         />
       </div>
       <div className={cx("choosing-car")}>
-        <CarSelect carList={carsInfo} />
+        <CarSelect carList={carsInfo} formName="selectedCar" />
       </div>
       <div className={cx("credit-car-block")}>
-        <CreditSlider type={"termOfCredit"} subtype={"credit-page"} />
-        <CreditSlider type={"initialLoan"} subtype={"credit-page"} />
+        <CreditSlider
+          control={control}
+          formName={"termOfCredit"}
+          options={{
+            marks: "yearMarksCreditPage",
+            formattedFunc: "getFormattedYears",
+            max: 96,
+            step: 1,
+            subHeading: "Желаемый срок кредита",
+          }}
+        />
+        <CreditSlider
+          control={control}
+          formName={"initialLoan"}
+          options={{
+            marks: "loanMarksCreditPage",
+            formattedFunc: "getFormattedLoan",
+            max: 50,
+            step: 1,
+            subHeading: "Первый взнос",
+          }}
+        />
       </div>
       <Divider customClass={cx("divider")} />
-      <div className={cx("price-block")}>
-        <PriceItm title={"Стоимость авто"} price={"349 000  ₽"} />
-        <PriceItm title={"Ежемесячный платёж"} price={"15 000  ₽"} />
-      </div>
-      {/* <button type="submit">SUbmit</button> */}
+      <BlockPrice carPrice={selectedCar.price} />
+      <button type="submit">SUbmit</button>
     </div>
   );
 };

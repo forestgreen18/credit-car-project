@@ -1,0 +1,4 @@
+.price-block {
+  display: flex;
+  gap: 80px;
+}

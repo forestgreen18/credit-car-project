@@ -60,7 +60,7 @@ export function useCarArticles(markID, modelID) {
         .then((responses) =>
           responses.map((r) => {
             return {
-              price: r.USD,
+              price: r.UAH,
               year: r.autoData.year,
               gearbox: r.autoData.gearboxName,
               mark: r.markName,
