@@ -104,6 +104,7 @@ const BuyerInfoForm = () => {
           <span>персональных данных</span>
         </p>
         <Button
+          type="submit"
           color={"blue"}
           title={"Отправить заявку"}
           customClass={cx("confirmation-btn")}

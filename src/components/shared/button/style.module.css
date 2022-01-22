@@ -7,6 +7,7 @@
   margin-top: 6%;
   display: flex;
   justify-self: flex-start;
+  border: none;
 }
 
 .btn-red {
