@@ -1,5 +1,11 @@
 import React, { Fragment } from "react";
-import { useController, Controller, useWatch } from "react-hook-form";
+import {
+  useController,
+  Controller,
+  useWatch,
+  useFormContext,
+} from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 
 import Select, { components, IndicatorsContainerProps } from "react-select";
 import css from "./style.module.css";
@@ -99,31 +105,43 @@ const Control = ({ children, ...props }) => {
 };
 
 const DropdownMenuCredit = (props) => {
-  const { options, subheading, formName, control, disabled = false } = props;
-
+  const { options, subheading, formName, disabled = false } = props;
+  const { formState, control } = useFormContext();
   return (
-    <Controller
-      control={control}
-      name={formName}
-      render={({
-        field: { onChange, onBlur, value, name, ref },
-        fieldState: { invalid, isTouched, isDirty, error },
-        formState,
-      }) => (
-        <Select
-          isDisabled={disabled}
-          value={options.find((c) => c.value === value)}
-          onChange={(val) => onChange(val.value)}
-          name={name}
-          subheading={subheading}
-          styles={customStyles}
-          defaultValue={null}
-          options={options}
-          components={{ Menu, DropdownIndicator, Control }}
-          innerRef={ref}
-        />
-      )}
-    />
+    <div className={cx("selection-block")}>
+      <ErrorMessage
+        errors={formState.errors}
+        name="buyerNameInfo"
+        render={({ message }) => (
+          <span className={cx("error-block")}>
+            это поле является обязательным
+          </span>
+        )}
+      />
+
+      <Controller
+        control={control}
+        name={formName}
+        render={({
+          field: { onChange, onBlur, value, name, ref },
+          fieldState: { invalid, isTouched, isDirty, error },
+          formState,
+        }) => (
+          <Select
+            isDisabled={disabled}
+            value={options.find((c) => c.value === value)}
+            onChange={(val) => onChange(val.value)}
+            name={name}
+            subheading={subheading}
+            styles={customStyles}
+            defaultValue={null}
+            options={options}
+            components={{ Menu, DropdownIndicator, Control }}
+            innerRef={ref}
+          />
+        )}
+      />
+    </div>
   );
 };
 

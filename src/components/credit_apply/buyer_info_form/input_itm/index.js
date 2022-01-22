@@ -2,7 +2,8 @@ import React from "react";
 import cssStyles from "./style.module.css";
 import cn from "classnames/bind";
 import styled, { css } from "styled-components";
-import InputMask from "react-input-mask";
+import { ErrorMessage } from "@hookform/error-message";
+
 import {
   useController,
   Controller,
@@ -35,120 +36,48 @@ const StyledSpan = styled.span`
   z-index: 2;
 `;
 
-function PhoneInput(props) {
-  const { onChange, value, placeholder, customClass } = props;
-
-  return (
-    <InputMask
-      mask="9-999-999-99-99"
-      onChange={onChange}
-      value={value}
-      type="tel"
-      placeholder={placeholder}
-      className={cx(customClass)}
-    />
-  );
-}
-
 const Input = (props) => {
-  const {
-    subheading = "",
-    type,
-    value,
-    placeholder,
-    control,
-    formName,
-  } = props;
+  const { subheading = "", type, value, placeholder, formName } = props;
 
   const [inputValue, setValue] = React.useState(value);
 
-  const { register } = useFormContext();
+  const { formState, control } = useFormContext();
 
-  function changeValue(event) {
-    setValue(event.target.value);
-  }
+  return (
+    <div className={cx("input-itm")}>
+      <ErrorMessage
+        errors={formState.errors}
+        name="buyerNameInfo"
+        render={({ message }) => (
+          <span className={cx("error-block")}>
+            это поле является обязательным
+          </span>
+        )}
+      />
+      <StyledSpan>{subheading}</StyledSpan>
 
-  if (type == "tel") {
-    if (subheading) {
-      return (
-        <Controller
-          control={control}
-          name={formName}
-          render={({
-            field: { onChange, onBlur, value, name, ref },
-            fieldState: { invalid, isTouched, isDirty, error },
-            formState,
-          }) => (
-            <div className={cx("input-itm")}>
-              <StyledSpan>{subheading}</StyledSpan>
-              <PhoneInput
-                placeholder={placeholder}
-                customClass="phone-input"
-                innerRef={ref}
-                name={name}
-                onChange={onChange}
-              />
-            </div>
-          )}
-        />
-      );
-    }
-
-    return (
-      <div className={cx("input-itm")}>
-        <StyledSpan>{subheading}</StyledSpan>
-
-        <Controller
-          control={control}
-          name={formName}
-          render={({
-            field: { onChange, onBlur, value, name, ref },
-            fieldState: { invalid, isTouched, isDirty, error },
-            formState,
-          }) => (
-            <div className={cx("input-itm")}>
-              <StyledSpan>{subheading}</StyledSpan>
-              <PhoneInput
-                placeholder={placeholder}
-                customClass="phone-input-single"
-                innerRef={ref}
-                name={name}
-                onChange={onChange}
-              />
-            </div>
-          )}
-        />
-      </div>
-    );
-  } else {
-    return (
-      <div className={cx("input-itm")}>
-        <StyledSpan>{subheading}</StyledSpan>
-
-        <Controller
-          control={control}
-          name={formName}
-          render={({
-            field: { onChange, onBlur, value, name, ref },
-            fieldState: { invalid, isTouched, isDirty, error },
-            formState,
-          }) => (
-            <div className={cx("input-itm")}>
-              <StyledInput
-                value={value}
-                type={type}
-                single={!subheading ? true : false}
-                placeholder={placeholder}
-                innerRef={ref}
-                name={name}
-                onChange={onChange}
-              />
-            </div>
-          )}
-        />
-      </div>
-    );
-  }
+      <Controller
+        control={control}
+        name={formName}
+        render={({
+          field: { onChange, onBlur, value, name, ref },
+          fieldState: { invalid, isTouched, isDirty, error },
+        }) => (
+          <div className={cx("input-itm")}>
+            <StyledInput
+              value={value}
+              type={type}
+              single={!subheading ? true : false}
+              placeholder={placeholder}
+              innerRef={ref}
+              name={name}
+              onChange={onChange}
+            />
+          </div>
+        )}
+      />
+    </div>
+  );
 };
 
 export default Input;

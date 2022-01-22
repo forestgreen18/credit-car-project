@@ -4,19 +4,8 @@
   width: 100%;
 }
 
-.phone-input,
-.phone-input-single {
-  font-family: "PT Root UI";
-  width: 100%;
-  padding: 30px 0 11px 22px;
-  border: 1px solid var(--dark-color);
-  border-radius: 10px;
-  position: relative;
-  font-size: 16px;
-  color: var(--text-black);
-  box-sizing: border-box;
-}
-
-.phone-input-single {
-  padding: 20px 0 21px 22px;
+.error-block {
+  position: absolute;
+  top: -20px;
+  z-index: 3;
 }

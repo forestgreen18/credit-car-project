@@ -2,16 +2,18 @@ import React from "react";
 import css from "./style.module.css";
 import cn from "classnames/bind";
 import Input from "./input_itm";
+
 import { useFetch } from "../../../hooks/useFetch";
 import { useForm, useWatch, useFormContext } from "react-hook-form";
 import Subheading from "../../shared/headings/subheading";
 import DropdownMenuCredit from "../../dropdown menu/dropdown_credit";
 import Button from "../../shared/button";
+import InputTel from "./tel_input_itm";
 
 const cx = cn.bind(css);
 
 const BuyerInfoForm = () => {
-  const { register, control, resetField } = useFormContext();
+  const { register, control, resetField, formState } = useFormContext();
 
   const confidants = [
     { value: "relative", label: "Родственник" },
@@ -42,7 +44,7 @@ const BuyerInfoForm = () => {
               subheading={"Полное ФИО"}
             />
 
-            <Input
+            <InputTel
               formName="buyerPhoneNumber"
               control={control}
               value={"8-913-107-07-25"}
@@ -50,7 +52,7 @@ const BuyerInfoForm = () => {
               subheading={"Мобильный телефон"}
             />
 
-            <Input
+            <InputTel
               placeholder={"Рабочий телефон"}
               type="tel"
               control={control}
@@ -79,7 +81,7 @@ const BuyerInfoForm = () => {
               control={control}
             />
 
-            <Input
+            <InputTel
               value={"8 913-104-39-89"}
               type="tel"
               subheading={"Мобильный телефон"}

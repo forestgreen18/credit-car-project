@@ -14,6 +14,7 @@ function calculateCarSum(termOfCredit, initialLoan, carPrice) {
 
   // annuity payment formula
   const percent = percentRate / 100 / 12;
+
   const annuityPayment =
     Math.trunc(
       creditSum *

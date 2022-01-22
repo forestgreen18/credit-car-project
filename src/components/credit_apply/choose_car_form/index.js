@@ -19,15 +19,8 @@ const cx = cn.bind(css);
 const ChooseCarForm = () => {
   const { formattedCarMarks: carList, errors, loading } = useCarMarks();
 
-  const {
-    register,
-    control,
-    resetField,
-    setValue,
-    errors: formErrors,
-  } = useFormContext();
-
-  console.log(formErrors);
+  const { register, control, resetField, setValue, formState } =
+    useFormContext();
 
   const carMark = useWatch({
     control,
