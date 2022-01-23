@@ -1,1 +1,1 @@
-export const AUTORIA_API_KEY = "AJExiG5NOgeHUD44enPoMytv92EbOBoOpXq9JF6o";
+export const AUTORIA_API_KEY = 'AJExiG5NOgeHUD44enPoMytv92EbOBoOpXq9JF6o';

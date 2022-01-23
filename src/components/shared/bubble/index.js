@@ -1,27 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-import css from "./style.module.css";
-import cn from "classnames/bind";
+import cn from 'classnames/bind';
+import css from './style.module.css';
+
 const cx = cn.bind(css);
 
-const Bubble = ({title, subheading, fontSizePx}) => {
+function Bubble({ title, subheading, fontSizePx }) {
 	const styling = {
 		fontSize: `${fontSizePx}px`,
-		marginBottom: '10px'
-	}
+		marginBottom: '10px',
+	};
 
 	return (
-		<div className={cx("blue-bubble")}
-			>
-				<p style={styling}>
-          {title}
-
-				</p>
-		  <span>
-			  {subheading}
-		  </span>
-        </div>
-	)
+		<div className={cx('blue-bubble')}>
+			<p style={styling}>{title}</p>
+			<span>{subheading}</span>
+		</div>
+	);
 }
 
-export default Bubble
+export default Bubble;

@@ -1,16 +1,16 @@
-import React from "react";
-import css from "./style.module.css";
+import React from 'react';
+import cn from 'classnames/bind';
+import css from './style.module.css';
 
-import cn from "classnames/bind";
 const cx = cn.bind(css);
 
-const SectionHeading = ({ children, span, customClass = {} }) => {
-  return (
-    <h2 className={cx("section-heading", customClass)}>
-      {children}
-      <span className={cx("section-span")}>{span}</span>
-    </h2>
-  );
-};
+function SectionHeading({ children, span, customClass = {} }) {
+	return (
+		<h2 className={cx('section-heading', customClass)}>
+			{children}
+			<span className={cx('section-span')}>{span}</span>
+		</h2>
+	);
+}
 
 export default SectionHeading;

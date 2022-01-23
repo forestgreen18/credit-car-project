@@ -3,9 +3,3 @@
   box-sizing: border-box;
   width: 100%;
 }
-
-.error-block {
-  position: absolute;
-  top: -20px;
-  z-index: 3;
-}

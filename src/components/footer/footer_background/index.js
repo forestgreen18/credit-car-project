@@ -1,10 +1,11 @@
-import React from "react";
-import css from "./style.module.css";
-import cn from "classnames/bind";
+import React from 'react';
+import cn from 'classnames/bind';
+import css from './style.module.css';
+
 const cx = cn.bind(css);
 
-const FooterBackground = ({ children }) => {
-  return <div className={cx("footer-background")}>{children}</div>;
-};
+function FooterBackground({ children }) {
+	return <div className={cx('footer-background')}>{children}</div>;
+}
 
 export default FooterBackground;

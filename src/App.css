@@ -73,3 +73,13 @@ body {
 .white-heading {
   color: var(--text-color-white);
 }
+
+.error-block {
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  z-index: 3;
+
+  color: var(--btn-color-red);
+  font-size: 12px;
+}

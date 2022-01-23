@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import css from "./style.module.css";
-import cn from "classnames/bind";
+import cn from 'classnames/bind';
+import css from './style.module.css';
+
 const cx = cn.bind(css);
 
-const Divider = ({ customClass = {} }) => {
-  return <div className={cx("divider", customClass)}></div>;
-};
+function Divider({ customClass = {} }) {
+	return <div className={cx('divider', customClass)} />;
+}
 
 export default Divider;
