@@ -9,6 +9,7 @@ import blueLogo from './assets/blue_logo.svg';
 
 import phoneIcon from './assets/phone_icon.png';
 import bluePhoneIcon from './assets/blue_phone_icon.svg';
+import Dropdown from './dropdown_menu';
 
 const cx = cn.bind(css);
 
@@ -59,10 +60,9 @@ function Header({ type = 'blue' }) {
 					+7 994-664-36-27
 				</a>
 			</span>
+
 			<div className={cx('burgerMenu', `${options.class}`)}>
-				<div />
-				<div />
-				<div />
+				<Dropdown />
 			</div>
 		</header>
 	);

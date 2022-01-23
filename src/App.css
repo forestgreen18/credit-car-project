@@ -107,3 +107,34 @@ body {
 		-webkit-transform: rotate(360deg);
 	}
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1920px) {
+	.buttons-block {
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
+	}
+
+	.buttons-block input {
+		/* width: 100%; */
+		padding: 15px 30px;
+	}
+}
+
+@media (max-width: 1600px) {
+	.buttons-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.buttons-block input {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.desc-paragraph {
+		font-size: 18px;
+	}
+}

@@ -25,3 +25,9 @@
 .content {
 	z-index: 5;
 }
+
+@media (max-width: 1920px) {
+	.bubble {
+		font-size: 14px;
+	}
+}

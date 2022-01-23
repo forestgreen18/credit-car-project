@@ -3,9 +3,22 @@
 	position: relative;
 	padding-bottom: 190px;
 	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .question-img {
 	top: 0;
 	position: absolute;
+	z-index: 1;
+}
+
+.content {
+	z-index: 2;
+}
+
+@media (max-width: 1920px) {
+	.question-img {
+		top: 5%;
+		left: -10%;
+	}
 }

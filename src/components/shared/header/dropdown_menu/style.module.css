@@ -1,0 +1,38 @@
+.menu-block {
+	display: none;
+	position: absolute;
+}
+
+.active {
+	display: block;
+}
+
+.menu-container {
+	position: relative;
+}
+
+.burgerMenu {
+}
+
+.burgerMenu {
+	gap: 9px;
+}
+
+.burgerMenu div:first-child {
+	margin: 0;
+}
+
+.burgerMenu div {
+	width: 30px;
+	height: 2px;
+	background: var(--text-color-white);
+	margin-top: 9px;
+}
+
+.header-light.burgerMenu div {
+	background: var(--bg-color-blue);
+}
+
+.burgerMenu:hover {
+	cursor: pointer;
+}

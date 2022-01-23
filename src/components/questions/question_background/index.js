@@ -8,7 +8,7 @@ const cx = cn.bind(css);
 function QuestionBackground({ children }) {
 	return (
 		<div className={cx('question-background')}>
-			{children}
+			<div className={cx('content')}>{children}</div>
 			<img
 				className={cx('question-img')}
 				alt='woman'

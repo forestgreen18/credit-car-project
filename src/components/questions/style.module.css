@@ -9,6 +9,7 @@
 .question-section {
 	margin-left: 37%;
 	background: var(--bg-color-blue);
+	z-index: 2;
 }
 
 .input-box {

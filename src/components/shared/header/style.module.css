@@ -77,3 +77,19 @@ span {
 .icon {
 	font-size: 40px;
 }
+
+@media (max-width: 1600px) {
+	nav {
+		font-size: 14px;
+	}
+
+	span {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 1400px) {
+	nav {
+		display: none;
+	}
+}

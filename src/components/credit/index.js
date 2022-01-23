@@ -25,11 +25,6 @@ function Credit() {
 	return (
 		<section className={cx('credit-section')}>
 			<div className={cx('heading-box')}>
-				{/* <p className={cx("section-heading", "credit-heading")}>
-          Кредит под любые условия <br />
-          со ставкой <span>от 7,4%</span>
-        </p> */}
-
 				<SectionHeading
 					className={cx('section-heading', 'credit-heading')}
 					span=' от 7,4%'>

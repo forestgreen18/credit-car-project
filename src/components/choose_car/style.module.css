@@ -1,31 +1,37 @@
 .showLink {
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--text-paragraph);
-  display: flex;
-  justify-content: baseline;
-  align-items: center;
+	font-size: 18px;
+	line-height: 1.6;
+	color: var(--text-paragraph);
+	display: flex;
+	justify-content: baseline;
+	align-items: center;
 }
 
 .choosecar-heading {
-  margin: 42px 0;
+	margin: 42px 0;
 }
 
 .choosecar-section {
-  padding-bottom: 66px;
+	padding-bottom: 66px;
 }
 
 .showLink img {
-  margin-left: 15px;
+	margin-left: 15px;
 }
 
 .head-block {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .cars-block {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-row-gap: 40px;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-row-gap: 40px;
+}
+
+@media (max-width: 1110px) {
+	.cars-block {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }

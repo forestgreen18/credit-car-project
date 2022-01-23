@@ -3,21 +3,27 @@
 } */
 
 .credit-heading {
-  padding-top: 60px;
+	padding-top: 60px;
 }
 
 .credit-heading span {
-  display: inline;
-  color: var(--bg-color-blue);
+	display: inline;
+	color: var(--bg-color-blue);
 }
 
 .credit-options-block {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 20px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 20px;
 }
 
 .credit-section {
-  padding-bottom: 100px;
+	padding-bottom: 100px;
+}
+
+@media (max-width: 1920px) {
+	.credit-options-block {
+		grid-template-columns: repeat(2, 50%);
+	}
 }
