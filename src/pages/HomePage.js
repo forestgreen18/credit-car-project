@@ -13,6 +13,7 @@ import CreditApplication from '../components/credit_application';
 
 import css from './style.module.css';
 import TradeIn from '../components/trade_in';
+import CustomBackground from '../components/shared/background';
 import ConsultingBackground from '../components/consulting/consulting_background';
 import Consulting from '../components/consulting';
 import Questions from '../components/questions';
@@ -28,7 +29,7 @@ const cx = cn.bind(css);
 
 function HomePage() {
 	return (
-		<div>
+		<>
 			<Background>
 				<Container>
 					<Hero />
@@ -57,31 +58,36 @@ function HomePage() {
 			<Container>
 				<TradeIn />
 			</Container>
-			<ConsultingBackground>
-				<Container>
-					<Consulting />
-				</Container>
-			</ConsultingBackground>
-			<QuestionBackground>
-				<Container>
-					<Questions />
-				</Container>
-			</QuestionBackground>
-			<DisclamerBackground>
-				<Container>
-					<Disclaming />
-				</Container>
-			</DisclamerBackground>
-			<FooterBackground>
-				<Container>
-					<Footer />
-				</Container>
-				<Divider />
-				<Container>
-					<Copyright />
-				</Container>
-			</FooterBackground>
-		</div>
+			<CustomBackground customClass={cx('consult-bg')}>
+				<ConsultingBackground>
+					<Container>
+						<Consulting />
+					</Container>
+				</ConsultingBackground>
+				<QuestionBackground>
+					<Container>
+						<Questions />
+					</Container>
+				</QuestionBackground>
+			</CustomBackground>
+
+			<CustomBackground customClass={cx('footer-bg')}>
+				<DisclamerBackground>
+					<Container>
+						<Disclaming />
+					</Container>
+				</DisclamerBackground>
+				<FooterBackground>
+					<Container>
+						<Footer />
+					</Container>
+					<Divider />
+					<Container>
+						<Copyright />
+					</Container>
+				</FooterBackground>
+			</CustomBackground>
+		</>
 	);
 }
 

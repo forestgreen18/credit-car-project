@@ -18,10 +18,6 @@ function Consulting() {
 					на ремонт автомобиля
 				</SectionHeading>
 
-				{/* <p className={cx("credit-heading")}>
-          Защити себя от расходов <br />
-          на ремонт автомобиля
-        </p> */}
 				<span className={cx('subheading')}>
 					Гарантия Karso – лучшая защита авто от <br /> поломок на дорогах для
 					авто с пробегом

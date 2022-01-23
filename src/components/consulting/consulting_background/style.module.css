@@ -1,23 +1,27 @@
 .consulting-background {
-  background: var(--bg-color-blue);
-  position: relative;
-  z-index: -3;
-  overflow: hidden;
-  padding-bottom: 90px;
+	background: var(--bg-color-blue);
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 90px;
+	height: 920px;
 }
 
 .bubble {
-  font-size: 30px;
-  line-height: 1.2;
-  position: absolute;
-  top: 490px;
-  left: 53%;
-  z-index: -1;
+	font-size: 30px;
+	line-height: 1.2;
+	position: absolute;
+	top: 490px;
+	left: 53%;
+	z-index: 2;
 }
 
 .car {
-  z-index: -2;
-  top: -12.5px;
-  left: 33.5%;
-  position: absolute;
+	z-index: 1;
+	top: -12.5px;
+	left: 33.5%;
+	position: absolute;
+}
+
+.content {
+	z-index: 5;
 }

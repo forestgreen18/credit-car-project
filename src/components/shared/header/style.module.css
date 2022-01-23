@@ -1,79 +1,79 @@
 header {
-  margin-top: 2.7%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	padding-top: 2.7%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 nav {
-  display: flex;
+	display: flex;
 }
 
 ul {
-  gap: 25px;
-  display: flex;
+	gap: 25px;
+	display: flex;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
 
 span {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .phoneLink {
-  text-decoration: none;
-  color: #fff;
+	text-decoration: none;
+	color: #fff;
 }
 
 .header-menu-list li > a {
-  color: var(--text-color-white);
-  text-decoration: none;
+	color: var(--text-color-white);
+	text-decoration: none;
 }
 
 .phoneLink img {
-  margin-right: 11px;
+	margin-right: 11px;
 }
 
 .burgerMenu {
-  gap: 9px;
+	gap: 9px;
 }
 
 .burgerMenu div:first-child {
-  margin: 0;
+	margin: 0;
 }
 
 .burgerMenu div {
-  width: 30px;
-  height: 2px;
-  background: var(--text-color-white);
-  margin-top: 9px;
+	width: 30px;
+	height: 2px;
+	background: var(--text-color-white);
+	margin-top: 9px;
 }
 
 .header-light.burgerMenu div {
-  background: var(--bg-color-blue);
+	background: var(--bg-color-blue);
 }
 
 .burgerMenu:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .dropdown-block {
-  position: relative;
+	position: relative;
 }
 
 .header-light {
-  color: var(--text-black);
+	color: var(--text-black);
 }
 
 .header-light.header-menu-list li > a {
-  color: var(--text-black);
-  text-decoration: none;
+	color: var(--text-black);
+	text-decoration: none;
 }
 
 .icon {
-  font-size: 40px;
+	font-size: 40px;
 }

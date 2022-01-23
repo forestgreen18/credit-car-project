@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import cn from 'classnames/bind';
 import Header from '../shared/header';
 
@@ -10,18 +10,10 @@ import MainHeading from '../shared/headings/main_heading';
 const cx = cn.bind(css);
 
 function Hero() {
-	const navigate = useNavigate();
-
 	return (
 		<section className={cx('root-hero')}>
 			<Header type='blue' />
 			<div className={css['text-content']}>
-				{/* <div className={cx("heading")}>
-          Оформи автокредит <br />
-          и получи авто в день <br />
-          обращения
-        </div> */}
-
 				<MainHeading customClass={cx('hero-heading')}>
 					Оформи автокредит <br />
 					и получи авто в день <br />

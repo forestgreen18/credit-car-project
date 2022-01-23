@@ -70,8 +70,8 @@
 }
 
 .question-heading {
-	margin-top: 147px;
-
+	padding-top: 147px;
+	margin-top: 0;
 	margin-bottom: 0;
 }
 
