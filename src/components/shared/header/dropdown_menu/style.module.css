@@ -1,6 +1,25 @@
 .menu-block {
 	display: none;
 	position: absolute;
+
+	top: 20px;
+}
+
+.menu-block ul {
+	display: flex;
+	flex-direction: column;
+	background: var(--text-color-white);
+
+	border-radius: 10px;
+	padding-left: 10px;
+	padding-top: 15px;
+	height: 200px;
+	width: 120px;
+}
+
+.menu-block a {
+	color: var(--heading-color);
+	font-weight: 700;
 }
 
 .active {

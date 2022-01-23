@@ -1,5 +1,23 @@
 .main-heading {
-  font-size: 64px;
-  line-height: 1.2;
-  font-weight: 700;
+	font-size: 64px;
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+	.main-heading {
+		font-size: 48px;
+	}
+}
+
+@media (max-width: 768px) {
+	.main-heading {
+		font-size: 36px;
+	}
+}
+
+@media (max-width: 520px) {
+	.main-heading {
+		font-size: 28px;
+	}
 }

@@ -46,12 +46,12 @@ span {
 	margin: 0;
 }
 
-.burgerMenu div {
+/* .burgerMenu div {
 	width: 30px;
 	height: 2px;
 	background: var(--text-color-white);
 	margin-top: 9px;
-}
+} */
 
 .header-light.burgerMenu div {
 	background: var(--bg-color-blue);
@@ -90,6 +90,14 @@ span {
 
 @media (max-width: 1400px) {
 	nav {
+		display: none;
+	}
+
+	.header {
+		align-items: baseline;
+	}
+
+	.phone-block {
 		display: none;
 	}
 }

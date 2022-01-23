@@ -15,9 +15,7 @@ function CreditItem({ title, desc, imgUrl }) {
 				<SectionHeading className={cx('credit-itm-heading')}>
 					{title}
 				</SectionHeading>
-				{/* <p className={cx("section-heading")}>{title}</p> */}
 
-				{/* //! Не завантажуються фото				 */}
 				<img alt='credit-icon' src={imgUrl} />
 			</div>
 			<p className={cx('desc-paragraph', 'desc-credit')}>{desc}</p>

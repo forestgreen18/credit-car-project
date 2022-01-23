@@ -4,7 +4,12 @@ import css from './style.module.css';
 
 const cx = cn.bind(css);
 
-const menuOptions = [{ label: 'opt1' }, { label: 'opt2' }, { label: 'opt3' }];
+const menuOptions = [
+	{ label: 'Купить' },
+	{ label: 'Продать' },
+	{ label: 'Автокредит' },
+	{ label: 'Контакты' },
+];
 
 const Dropdown = () => {
 	const [active, setActive] = React.useState(false);
@@ -25,7 +30,7 @@ const Dropdown = () => {
 				<ul>
 					{menuOptions.map((option) => {
 						return (
-							<li>
+							<li key={option.label}>
 								<a href='#'>{option.label}</a>
 							</li>
 						);

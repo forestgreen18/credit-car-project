@@ -52,7 +52,7 @@ function Header({ type = 'blue' }) {
 			<span className={cx('dropdown-block', `${options.class}`)}>
 				<DropdownMenu options={cities} theme={options.theme} />
 			</span>
-			<span>
+			<span className={cx('phone-block')}>
 				<a
 					href='tel:7-994-664-36-27'
 					className={cx('phoneLink', `${options.class}`)}>
