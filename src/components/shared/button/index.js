@@ -1,4 +1,3 @@
-import React from 'react';
 import cn from 'classnames/bind';
 import css from './style.module.css';
 

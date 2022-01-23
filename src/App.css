@@ -1,85 +1,109 @@
 /* common styles */
 
 :root {
-  --btn-color-red: #fe264c;
-  --btn-color-hover-red: #e83f5c;
-  --bg-color-blue: #07b1fd;
-  --btn-color-hover-blue: #029de0;
-  --text-color-white: #fff;
-  --text-paragraph: #696969;
-  --text-gray: #f3f3f3;
-  --text-black: #000;
-  --heading-color: #2c2c2c;
-  --disclamer-color: #334356;
-  --footer-color: #202c3a;
-  --footer-item-color: #bdbdbd;
-  --price-color: #949494;
-  --dark-color: #464646;
+	--btn-color-red: #fe264c;
+	--btn-color-hover-red: #e83f5c;
+	--bg-color-blue: #07b1fd;
+	--btn-color-hover-blue: #029de0;
+	--text-color-white: #fff;
+	--text-paragraph: #696969;
+	--text-gray: #f3f3f3;
+	--text-black: #000;
+	--heading-color: #2c2c2c;
+	--disclamer-color: #334356;
+	--footer-color: #202c3a;
+	--footer-item-color: #bdbdbd;
+	--price-color: #949494;
+	--dark-color: #464646;
 }
 
 body {
-  font-family: "PT Root UI";
-  color: var(--text-color-white);
+	font-family: 'PT Root UI';
+	color: var(--text-color-white);
 }
 
 /* UI Components */
 
 .section-heading {
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.2;
-  color: var(--heading-color);
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 1.2;
+	color: var(--heading-color);
 }
 
 .amount-box {
-  border-radius: 9px;
-  background: var(--text-gray);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	border-radius: 9px;
+	background: var(--text-gray);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  color: var(--text-black);
-  font-weight: 400;
-  font-size: 18px;
+	color: var(--text-black);
+	font-weight: 400;
+	font-size: 18px;
 }
 
 .desc-paragraph {
-  color: var(--text-paragraph);
-  font-size: 20px;
-  line-height: 1.6;
+	color: var(--text-paragraph);
+	font-size: 20px;
+	line-height: 1.6;
 }
 
 .heading {
-  margin-top: 14%;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 1.23;
+	margin-top: 14%;
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 1.23;
 }
 
 .buttons-block {
-  display: flex;
+	display: flex;
 }
 
 .buttons-block div:nth-child(2) {
-  margin-left: 20px;
+	margin-left: 20px;
 }
 
 .heading-span {
-  font-size: inherit;
-  color: var(--bg-color-blue);
-  font-size: 42px;
+	font-size: inherit;
+	color: var(--bg-color-blue);
+	font-size: 42px;
 }
 
 .white-heading {
-  color: var(--text-color-white);
+	color: var(--text-color-white);
 }
 
 .error-block {
-  position: absolute;
-  top: -20px;
-  width: 100%;
-  z-index: 3;
+	position: absolute;
+	top: -20px;
+	width: 100%;
+	z-index: 3;
 
-  color: var(--btn-color-red);
-  font-size: 12px;
+	color: var(--btn-color-red);
+	font-size: 12px;
+}
+
+/* spinner */
+
+#loader {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	border-top-color: #fff;
+	animation: spin 1s ease-in-out infinite;
+	-webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes spin {
+	to {
+		-webkit-transform: rotate(360deg);
+	}
 }

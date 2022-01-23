@@ -1,14 +1,8 @@
-import React from 'react';
-import {
-	useController,
-	Controller,
-	useWatch,
-	useFormContext,
-} from 'react-hook-form';
+import { Controller, useFormContext } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
 
 import cn from 'classnames/bind';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import InputMask from 'react-input-mask';
 import cssStyles from './style.module.css';
 
@@ -49,10 +43,7 @@ function InputTel(props) {
 		<Controller
 			control={control}
 			name={formName}
-			render={({
-				field: { onChange, onBlur, value, name, ref },
-				fieldState: { invalid, isTouched, isDirty, error },
-			}) => (
+			render={({ field: { onChange, name, ref }, fieldState }) => (
 				<div className={cx('input-itm')}>
 					<ErrorMessage
 						errors={formState.errors}

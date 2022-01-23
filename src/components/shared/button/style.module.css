@@ -1,42 +1,42 @@
 .button {
-  padding: 17px 45px;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text-color-white);
-  border-radius: 20px;
-  margin-top: 6%;
-  display: flex;
-  justify-self: flex-start;
-  border: none;
+	padding: 17px 45px;
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--text-color-white);
+	border-radius: 20px;
+	margin-top: 6%;
+	display: flex;
+	justify-self: flex-start;
+	border: none;
 }
 
 .btn-red {
-  background: var(--btn-color-red);
+	background: var(--btn-color-red);
 }
 
 .btn-red:hover {
-  background: var(--btn-color-hover-red);
+	background: var(--btn-color-hover-red);
 }
 
 .btn-white {
-  background: none;
-  color: var(--text-paragraph);
-  border: 2px solid var(--text-paragraph);
+	background: none;
+	color: var(--text-paragraph);
+	border: 2px solid var(--text-paragraph);
 }
 
 .btn-white:hover {
-  border-color: var(--bg-color-blue);
-  color: var(--bg-color-blue);
+	border-color: var(--bg-color-blue);
+	color: var(--bg-color-blue);
 }
 
 .btn-blue {
-  background: var(--bg-color-blue);
+	background: var(--bg-color-blue);
 }
 
 .btn-blue:hover {
-  background: var(--btn-color-hover-blue);
+	background: var(--btn-color-hover-blue);
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }

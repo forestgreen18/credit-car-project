@@ -12,7 +12,6 @@ import Subheading from '../../shared/headings/subheading';
 import CarSelect from '../car_select';
 import CreditSlider from '../../shared/CreditSlider';
 import Divider from '../../shared/divider';
-import PriceItm from './price_item';
 import BlockPrice from './block_price';
 
 const cx = cn.bind(css);
@@ -20,8 +19,7 @@ const cx = cn.bind(css);
 function ChooseCarForm() {
 	const { formattedCarMarks: carList, errors, loading } = useCarMarks();
 
-	const { register, control, resetField, setValue, formState } =
-		useFormContext();
+	const { control, resetField, setValue } = useFormContext();
 
 	const carMark = useWatch({
 		control,
@@ -46,8 +44,9 @@ function ChooseCarForm() {
 	const {
 		cars: carsInfo = [],
 		errors: articlesErrors,
-		loading: articlesLoading,
+		isLoading: articlesLoading,
 	} = useCarArticles(carMark, carModel);
+
 	const selectedCarId = useWatch({
 		control,
 		name: 'selectedCar',
@@ -59,7 +58,6 @@ function ChooseCarForm() {
 		setValue('carModelTitle', foundCar.model);
 		setValue('carMarkTitle', foundCar.mark);
 		setValue('carLink', foundCar.initialLink);
-		console.log(foundCar, ' selectedCar');
 
 		return foundCar;
 	}, [selectedCarId, JSON.stringify(carsInfo)]);
@@ -88,7 +86,11 @@ function ChooseCarForm() {
 				/>
 			</div>
 			<div className={cx('choosing-car')}>
-				<CarSelect carList={carsInfo} formName='selectedCar' />
+				{articlesLoading ? (
+					<div id='loader' />
+				) : (
+					<CarSelect carList={carsInfo} formName='selectedCar' />
+				)}
 			</div>
 			<div className={cx('credit-car-block')}>
 				<CreditSlider

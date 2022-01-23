@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames/bind';
-import { useFormContext, useWatch, Controller } from 'react-hook-form';
+import { useFormContext, useWatch } from 'react-hook-form';
 import css from './style.module.css';
 import PriceItm from '../price_item';
 
@@ -28,7 +28,7 @@ function calculateCarSum(termOfCredit, initialLoan, carPrice) {
 }
 
 function BlockPrice({ carPrice = 0 }) {
-	const { control, register, setValue } = useFormContext();
+	const { control, setValue } = useFormContext();
 
 	const termOfCredit =
 		useWatch({
@@ -41,12 +41,6 @@ function BlockPrice({ carPrice = 0 }) {
 			control,
 			name: 'initialLoan',
 		}) || 0;
-
-	// const { creditSum, annuityPayment } = calculateCarSum(
-	//   termOfCredit,
-	//   initialLoan,
-	//   carPrice
-	// );
 
 	const { creditSum = 0, annuityPayment = 0 } = React.useMemo(() => {
 		const result = calculateCarSum(termOfCredit, initialLoan, carPrice);

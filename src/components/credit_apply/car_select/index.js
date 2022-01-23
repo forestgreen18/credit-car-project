@@ -1,10 +1,6 @@
-import React from 'react';
 import cn from 'classnames/bind';
 import css from './style.module.css';
 import CarCard from './car_card';
-
-import hyundai13 from './assets/hyundai 13.jpg';
-import hyundai16 from './assets/hyundai 16.jpg';
 
 const cx = cn.bind(css);
 

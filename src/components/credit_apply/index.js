@@ -1,6 +1,5 @@
-import React from 'react';
 import cn from 'classnames/bind';
-import { useForm, FormProvider, useFormContext } from 'react-hook-form';
+import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import MainHeading from '../shared/headings/main_heading';
@@ -45,6 +44,7 @@ function CreditApply() {
 	});
 
 	const onSubmit = (data) => {
+		// output form data
 		console.log(data);
 	};
 

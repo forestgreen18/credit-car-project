@@ -43,8 +43,7 @@ export function useCarArticles(markID, modelID) {
 	if (markID && modelID) {
 		route = `auto/search?api_key=${AUTORIA_API_KEY}&s_yers[1]=2021&po_yers[1]=2022&marka_id[1]=${markID}&model_id[1]=${modelID}`;
 	}
-
-	const { response: carArticles, errors, loading } = useFetch(route);
+	const { response: carArticles, errors, isLoading } = useFetch(route);
 
 	const formattedCarArticles = carArticles?.result.search_result.ids;
 	const [cars, setCars] = React.useState();
@@ -81,5 +80,5 @@ export function useCarArticles(markID, modelID) {
 		}
 	}, [formattedCarArticles]);
 
-	return { cars, errors, loading };
+	return { cars, errors, isLoading };
 }

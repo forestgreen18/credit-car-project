@@ -32,8 +32,8 @@ const useFetch = (
 					const json = await res.json();
 
 					setResponse(json);
-				} catch (error) {
-					setError(error);
+				} catch (err) {
+					setError(err);
 				} finally {
 					setIsLoading(false);
 				}

@@ -1,14 +1,8 @@
-import React from 'react';
 import cn from 'classnames/bind';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { ErrorMessage } from '@hookform/error-message';
 
-import {
-	useController,
-	Controller,
-	useWatch,
-	useFormContext,
-} from 'react-hook-form';
+import { Controller, useFormContext } from 'react-hook-form';
 import cssStyles from './style.module.css';
 
 const cx = cn.bind(cssStyles);
@@ -37,9 +31,7 @@ const StyledSpan = styled.span`
 `;
 
 function Input(props) {
-	const { subheading = '', type, value, placeholder, formName } = props;
-
-	const [inputValue, setValue] = React.useState(value);
+	const { subheading = '', type, placeholder, formName } = props;
 
 	const { formState, control } = useFormContext();
 
@@ -57,10 +49,7 @@ function Input(props) {
 			<Controller
 				control={control}
 				name={formName}
-				render={({
-					field: { onChange, onBlur, value, name, ref },
-					fieldState: { invalid, isTouched, isDirty, error },
-				}) => (
+				render={({ field: { onChange, value, name, ref } }) => (
 					<div className={cx('input-itm')}>
 						<StyledInput
 							value={value}

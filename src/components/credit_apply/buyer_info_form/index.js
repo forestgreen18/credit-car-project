@@ -1,10 +1,8 @@
-import React from 'react';
 import cn from 'classnames/bind';
-import { useForm, useWatch, useFormContext } from 'react-hook-form';
+import { useFormContext } from 'react-hook-form';
 import css from './style.module.css';
 import Input from './input_itm';
 
-import { useFetch } from '../../../hooks/useFetch';
 import Subheading from '../../shared/headings/subheading';
 import DropdownMenuCredit from '../../dropdown menu/dropdown_credit';
 import Button from '../../shared/button';
@@ -13,21 +11,12 @@ import InputTel from './tel_input_itm';
 const cx = cn.bind(css);
 
 function BuyerInfoForm() {
-	const { register, control, resetField, formState } = useFormContext();
+	const { control } = useFormContext();
 
 	const confidants = [
 		{ value: 'relative', label: 'Родственник' },
 		{ value: 'wife/husband', label: 'Муж/Жена' },
 	];
-
-	const inputName = useWatch({
-		control,
-		name: 'buyerNameInfo', // without supply name will watch the entire form, or ['firstName', 'lastName'] to watch both
-	});
-
-	React.useEffect(() => {
-		// console.log(inputName);
-	}, [inputName]);
 
 	return (
 		<div className={cx('choosecar')}>
